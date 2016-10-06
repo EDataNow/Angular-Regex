@@ -11,7 +11,7 @@ export class AppComponent {
   ngOnInit () {}
 
 // #1
-// Match string on any position, non-case sensitive. Returns the whole string  
+// Match string on any position, non-case sensitive. Returns the whole string
 
 
  matchOnAnyPosition(barcode, input_string){
@@ -42,7 +42,7 @@ export class AppComponent {
   }
 
 // Case #3
-// Match on any postion, case sensitive. returns the string proceeding from 
+// Match on any postion, case sensitive. returns the string proceeding from
 // match including the match
 
  matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, input_string){
@@ -59,7 +59,7 @@ export class AppComponent {
   }
 
 // Case #4
-// Match on any position, case sensitive. returns the string proceeding from match NOT 
+// Match on any position, case sensitive. returns the string proceeding from match NOT
 // including the match
 
  matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, input_string){
@@ -76,7 +76,7 @@ export class AppComponent {
   }
 
 // Case #5
-// Match on any position, case sensitive. returns the string proceeding from match 
+// Match on any position, case sensitive. returns the string proceeding from match
 // including the match and specific length after the match
 
  matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength (barcode, input_string, length){
@@ -84,7 +84,7 @@ export class AppComponent {
    let input_length = length
    let regEx = new RegExp(input)
    let match = regEx.exec(barcode);
-    
+
    if (match) {
     return barcode.slice(match.index, match.index + input_length + input.length);
    } else {
@@ -93,14 +93,14 @@ export class AppComponent {
   }
 
 // Case #6
-// Match on any position, case sensitive. returns the string proceeding from match 
+// Match on any position, case sensitive. returns the string proceeding from match
 // not including the match and specific length after the match
 matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, input_string, length){
    let input = `${input_string}`;
-   let input_length = length 
+   let input_length = length
    let regEx = new RegExp(input)
    let match = regEx.exec(barcode);
-    
+
    if (match) {
     return barcode.slice(match.index + input.length, match.index + input.length + length);
    } else {
@@ -140,9 +140,8 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
    let input_length = length
    let result = barcode.slice(start_index, start_index + input_length);
    return result;
-}
 
 
-  
+
 
 }

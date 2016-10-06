@@ -90,3 +90,4 @@ it('should match after given index and specific length, not including match', ()
   });
 
 });
+
