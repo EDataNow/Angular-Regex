@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'app works!';
 
   ngOnInit () {}
@@ -114,6 +115,7 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
    let start_index = start - 1
    let result = barcode.slice(start_index)
    return result;
+
 }
 
 // Case #8
@@ -140,8 +142,5 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
    let input_length = length
    let result = barcode.slice(start_index, start_index + input_length);
    return result;
-
-
-
-
+	}
 }

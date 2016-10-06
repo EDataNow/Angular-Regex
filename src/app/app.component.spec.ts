@@ -88,6 +88,5 @@ it('should match after given index and specific length, not including match', ()
     expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode1, 8, 3)).toEqual('500');
     expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode1, 5, 3)).not.toEqual('500');
   });
-
 });
 
