@@ -1,0 +1,29 @@
+select, option {
+	width: 500px;
+}
+
+.match_on_label_dd {
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.return_label_dd {
+    padding-top: 21px;
+    padding-left: 25px;
+}
+
+.row {
+	padding-top: 21px;
+	padding-left: 25px;
+}
+
+.return_label {
+    padding-right: 21px;
+}
+
+.active {
+    padding-right: 30px;
+}
+.validate {
+	width: 493px;
+}
