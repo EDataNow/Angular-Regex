@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class="match_on_label_dd">
+	<label for="match on dropdown">Match On: </label>
+	<select id="match on dropdown" class="browser-default">
+	    <option>Starting Character</option>
+	    <option>First Occurrance of Character</option>
+	    <option>Always Match on Position</option>
+	</select>
+</div>
+
+<div class="return_label_dd">
+	<label class="return_label" for="return dropdown">Return:</label>
+	<select id="return dropdown" class="browser-default">
+	    <option>All</option>
+	    <option>Specific Length</option>
+	    <option>Progress from match</option>
+	</select>
+</div>
+
+
+<div class="row">
+    <div class="input-field col s6">
+      <label class="active" for="test_it">Input Barcode</label>
+      <input id="test_it" type="text" class="validate">
+    </div>
+</div>

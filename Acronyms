@@ -1,0 +1,103 @@
+Acronyms
+PF - Proceed From Match
+SL - Specific Length
+
+Index0 - Starting Position
+Character - First Occurrence of Character
+Position - Always Match on Position
+
+Input: P12345-A500-H1
+
+Case: {
+  Given: {
+    Match On: [A5, Character],
+    Include Match: nil,
+    Return: All
+  },
+  Expect: P12345-A500-H1
+},
+
+Case: {
+  Given: {
+    Match On: [A5, Index0],
+    Include Match: nil,
+    Return: All
+  },
+  Expect: nil
+},
+
+Case: {
+  Given: {
+    Match On: [P, Character],
+    Include Match: true,
+    Return: PF
+  },
+  Expect: P12345-A500-H1
+},
+
+Case: {
+  Given: {
+    Match On: [P, Character],
+    Include Match: false,
+    Return: PF
+  },
+  Expect: 12345-A500-H1
+},
+
+Case: {
+  Given: {
+    Match On: [P, Character],
+    Include Match: true,
+    Return: SL(5)
+  },
+  Expect: P12345
+},
+
+Case: {
+  Given: {
+    Match On: [P, Character],
+    Include Match: false,
+    Return: SL(5)
+  },
+  Expect: 12345
+},
+
+Case: {
+  Given: {
+    Match On: [8, Position],
+    Include Match: true,
+    Return: PF
+  },
+  Expect: A500-H1
+  }
+},
+
+Case: {
+  Given: {
+    Match On: [8, Position],
+    Include Match: false,
+    Return: PF
+  },
+  Expect: 500-H1
+  }
+},
+
+Case: {
+  Given: {
+    Match On: [8, Position],
+    Include Match: true,
+    Return: SL(3)
+  },
+  Expect: A500
+  }
+}
+
+Case: {
+  Given: {
+    Match On: [8, Position],
+    Include Match: false,
+    Return: SL(3)
+  },
+  Expect: 500
+  }
+}
