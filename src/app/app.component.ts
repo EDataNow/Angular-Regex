@@ -6,140 +6,158 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'app works!';
 
-  ngOnInit () { console.log("Log your statement here") }
+  ngOnInit () {}
 
-   matchOnAnyPosition(barcode, input_string){
-      let input = `${input_string}`
-      let regEx = new RegExp(input)
-      let barcodeMatch = regEx.test(barcode);
-    
-      if (barcodeMatch) {
-        return barcode
-      } else {
-        return "No Match"
-      }
-    }
+// #1
+// Match string on any position, non-case sensitive. Returns the whole string
 
-  // Case #2
-  // Case sensitive match on FIRST letter, returns the whole string
 
-    matchOnFirstCharacter(barcode, input_string){
-      let input = `^${input_string}`
-      let regEx = new RegExp(input)
-      let barcodeMatch = regEx.test(barcode);
-    
-      if (barcodeMatch) {
-        return barcode
-      } else {
-        return "No Match"
-      }
-    }
-
-  // Case #3
-  // Match on any postion, case sensitive. returns the string proceeding from 
-  // match including the match
-
-  matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, input_string){
-    let input = `${input_string}`
+ matchOnAnyPosition(barcode, input_string){
+    let input = `${input_string}`
     let regEx = new RegExp(input)
-    let barcodeMatch = regEx.exec(barcode);
-
+    let barcodeMatch = regEx.test(barcode);
+  
     if (barcodeMatch) {
-    let output = barcode.slice(barcodeMatch.index);
-      return output
+      return barcode
     } else {
       return "No Match"
     }
   }
 
-  // Case #4
-  // Match on any position, case sensitive. returns the string proceeding from match NOT 
-  // including the match
+// Case #2
+// Case sensitive match on FIRST letter, returns the whole string
 
-  matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, input_string){
-    let input = `${input_string}`
+  matchOnFirstCharacter(barcode, input_string){
+    let input = `^${input_string}`
     let regEx = new RegExp(input)
-    let barcodeMatch = regEx.exec(barcode);
-
+    let barcodeMatch = regEx.test(barcode);
+  
     if (barcodeMatch) {
-    let output = barcode.slice(barcodeMatch.index + input.length);
-      return output
+      return barcode
     } else {
       return "No Match"
     }
   }
 
-  // Case #5
-  // Match on any position, case sensitive. returns the string proceeding from match 
-  // including the match and specific length after the match
+// Case #3
+// Match on any postion, case sensitive. returns the string proceeding from
+// match including the match
 
-  matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength (barcode, input_string, length){
-    let input = `${input_string}`;
-    let input_length = length
-    let regEx = new RegExp(input)
-    let match = regEx.exec(barcode);
-      
-    if (match) {
-      return barcode.slice(match.index, match.index + input_length + input.length);
-    } else {
-      return "No Match"
-    }
+ matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, input_string){
+   let input = `${input_string}` + '(.*)'
+   let regEx = new RegExp(input)
+   let barcodeMatch = regEx.exec(barcode)
+
+   if (barcodeMatch) {
+     return barcodeMatch[0]
+   } else {
+     return "No Match"
+   }
   }
 
-  // Case #6
-  // Match on any position, case sensitive. returns the string proceeding from match 
-  // not including the match and specific length after the match
-  matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, input_string, length){
-    let input = `${input_string}`;
-    let input_length = length 
-    let regEx = new RegExp(input)
-    let match = regEx.exec(barcode);
-      
-    if (match) {
-      return barcode.slice(match.index + input.length, match.index + input.length + length);
-    } else {
-      return "No Match"
-    }
+// Case #4
+// Match on any position, case sensitive. returns the string proceeding from match NOT
+// including the match
+
+ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, input_string){
+    let input = `${input_string}` + '(.*)' //input(.*)
+   console.log(input)
+   let regEx = new RegExp(input)
+   let barcodeMatch = regEx.exec(barcode)
+
+   if (barcodeMatch) {
+     return barcodeMatch[1]
+   } else {
+     return "No Match"
+   }
   }
 
-  // Case #7
+
+// Case #5
+// Match on any position, case sensitive. returns the string proceeding from match
+// including the match and specific length after the match
+
+ matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength (barcode, input_string, length){
+   let input = '(' + `${input_string}` + '.' + '{' + `${length}` +'})'; //(input.{length})
+   let regEx = new RegExp(input)
+   let match = regEx.exec(barcode);
+
+   if (match) {
+    return match[0]
+   } else {
+     return "No Match"
+   }
+  }
+
+// Case #6
+// Match on any position, case sensitive. returns the string proceeding from match
+// not including the match and specific length after the match
+matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, input_string, length){
+   let input = `${input_string}`+ '(.' + '{' + `${length}` +'})'; //input(.{length})
+   let regEx = new RegExp(input)
+   let match = regEx.exec(barcode);
+
+   if (match) {
+    return match[1]
+   } else {
+     return "No Match"
+   }
+  }
+
+// Case #7
   // Match on given index, include match.
   matchGivenIndexIncludeMatch(barcode, start){
-    let start_index = start - 1
-    let result = barcode.slice(start_index)
-    return result;
+    let input = `^.{${start - 1}}(.+)`
+    let regEx = new RegExp(input);
+    let match = regEx.exec(barcode);
+
+    if (match) {
+      return match[1]
+    } else {
+      return "No Match"
+    }    
   }
 
   // Case #8
   // Match on given index, exclude match.
   matchGivenIndexNotIncludeMatch(barcode, start){
-    let start_index = start
-    let result = barcode.slice(start_index)
-    return result;
+    let input = `^.{${start}}(.+)`
+    let regEx = new RegExp(input);
+    let match = regEx.exec(barcode);
+
+    if (match) {
+      return match[1]
+    } else {
+      return "No Match"
+    }    
   }
 
-  // Case #9
-  // Match on given index and given length, include match.
-  matchGivenIndexAndSpecificLengthIncludeMatch(barcode, start, length){
-    let start_index = start - 1
-    let input_length = length + 1
-    let result = barcode.slice(start_index, start_index + input_length);
-    return result;
-  }
+// Case #9
+// Match on given index and given length, include match.
+ matchGivenIndexAndSpecificLengthIncludeMatch(barcode, start, length){
+ 	 let input = '^.{' + `${start - 1}` +'}' + '(.{' + `${length + 1}` +'}).*'; //^.{start}(.{length}).*
+ 	 console.log(input)
+   let regEx = new RegExp(input)
+   let match = regEx.exec(barcode);
+   console.log(match)
+   return match[1];
+}
 
   // Case #10
   // Match on given index and given length, exclude match.
-  matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, start, length){
-    let start_index = start
-    let input_length = length
-    let result = barcode.slice(start_index, start_index + input_length);
-    return result;
+  matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, start, length) {
+   let input = '^.{' + `${start}` +'}' + '(.{' + `${length}` +'}).*'; //^.{start}(.{length}).*
+   let regEx = new RegExp(input)
+   let match = regEx.exec(barcode);
+   return match[1];
   }
   
   
   // Combined Methods
+  // Stopped refactoring mid-way through the prcoess due to requirement changes
   
   // Case # 1 and case # 2 combined method
   // Must provide a BOOLEAN value set (match_from_index_0) to check if it is matching FROM Index_0
@@ -194,15 +212,20 @@ export class AppComponent {
 
   // Case #7 and case #8 combined method
   // Must provide a (start_postion) and to include or not include_match
+    matchGivenIndexIncludeOrExcludeMatch(barcode, start_position, include_match) {
+    let include_match_regex = `^.{${start_position - 1}}(.+)`
+    let exclude_match_regex = `^.{${start_position}}(.+)` 
+    let input = include_match ? include_match_regex : exclude_match_regex
+    let regEx = new RegExp(input);
+    let match = regEx.exec(barcode);
 
-  matchGivenIndexIncludeOrExcludeMatch(barcode, start_position, include_match) {
-    let match_included = start_position - 1;
-    let match_excluded = start_position
-    let start_index = include_match? match_included : match_excluded
-    let result = barcode.slice(start_index)
-    
-    return result;
-  }
+      if (match) {
+        return match[1]
+      } else {
+        return "No Match"
+      }  
+    }
+
 
   // Case #9 and case #10 combined method
   // Must provide a starting (start) position, return (length) length after the match and a boolean (include_match) 
