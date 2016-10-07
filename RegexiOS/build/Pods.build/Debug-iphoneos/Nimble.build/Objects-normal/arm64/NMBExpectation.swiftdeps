@@ -1,0 +1,461 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ObjCMatcherWrapper"
+- "NMBExpectation"
+provides-nominal:
+- "V6Nimble18ObjCMatcherWrapper"
+- "C6Nimble14NMBExpectation"
+provides-member:
+- ["V6Nimble18ObjCMatcherWrapper", ""]
+- ["C6Nimble14NMBExpectation", ""]
+provides-dynamic-lookup:
+- "toEventuallyWithDescription"
+- "_actualBlock"
+- "toWithDescription"
+- "toEventuallyNotWithDescription"
+- "withTimeout"
+- "_line"
+- "notTo"
+- "to"
+- "failWithMessage"
+- "notToWithDescription"
+- "_timeout"
+- "toNot"
+- "_negative"
+- "toNotWithDescription"
+- "toEventually"
+- "toEventuallyNot"
+- "_file"
+- "toNotEventually"
+- "toNotEventuallyWithDescription"
+depends-top-level:
+- !private "StringLiteralType"
+- "Bool"
+- "ObjCMatcherWrapper"
+- "Void"
+- !private "SourceLocation"
+- "FailureMessage"
+- !private "fail"
+- "NMBExpectation"
+- "TimeInterval"
+- "FileString"
+- "String"
+- !private "expect"
+- "Expression"
+- "UInt"
+- "NMBMatcher"
+- !private "CastingPrecedence"
+- "AssignmentPrecedence"
+- "Matcher"
+- "Expectation"
+- "NSObject"
+depends-member:
+- !private ["Ps9AnyObject", "ObjCMatcherWrapper"]
+- !private ["Ps9AnyObject", "SourceLocation"]
+- ["Ps9AnyObject", "_actualBlock"]
+- ["Ps9AnyObject", "_file"]
+- ["Ps9AnyObject", "_line"]
+- ["Ps9AnyObject", "_negative"]
+- ["Ps9AnyObject", "_timeout"]
+- !private ["Ps9AnyObject", "expect"]
+- ["Ps9AnyObject", "expectValue"]
+- !private ["Ps9AnyObject", "fail"]
+- ["Ps9AnyObject", "failWithMessage"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "notTo"]
+- ["Ps9AnyObject", "notToWithDescription"]
+- ["Ps9AnyObject", "to"]
+- ["Ps9AnyObject", "toEventually"]
+- ["Ps9AnyObject", "toEventuallyNot"]
+- ["Ps9AnyObject", "toEventuallyNotWithDescription"]
+- ["Ps9AnyObject", "toEventuallyWithDescription"]
+- ["Ps9AnyObject", "toNot"]
+- ["Ps9AnyObject", "toNotEventually"]
+- ["Ps9AnyObject", "toNotEventuallyWithDescription"]
+- ["Ps9AnyObject", "toNotWithDescription"]
+- ["Ps9AnyObject", "toWithDescription"]
+- ["Ps9AnyObject", "withTimeout"]
+- ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "ObjCMatcherWrapper"]
+- !private ["Ps7CVarArg", "SourceLocation"]
+- ["Ps7CVarArg", "_actualBlock"]
+- ["Ps7CVarArg", "_file"]
+- ["Ps7CVarArg", "_line"]
+- ["Ps7CVarArg", "_negative"]
+- ["Ps7CVarArg", "_timeout"]
+- !private ["Ps7CVarArg", "expect"]
+- ["Ps7CVarArg", "expectValue"]
+- !private ["Ps7CVarArg", "fail"]
+- ["Ps7CVarArg", "failWithMessage"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "notTo"]
+- ["Ps7CVarArg", "notToWithDescription"]
+- ["Ps7CVarArg", "to"]
+- ["Ps7CVarArg", "toEventually"]
+- ["Ps7CVarArg", "toEventuallyNot"]
+- ["Ps7CVarArg", "toEventuallyNotWithDescription"]
+- ["Ps7CVarArg", "toEventuallyWithDescription"]
+- ["Ps7CVarArg", "toNot"]
+- ["Ps7CVarArg", "toNotEventually"]
+- ["Ps7CVarArg", "toNotEventuallyWithDescription"]
+- ["Ps7CVarArg", "toNotWithDescription"]
+- ["Ps7CVarArg", "toWithDescription"]
+- ["Ps7CVarArg", "withTimeout"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps28CustomDebugStringConvertible", "ObjCMatcherWrapper"]
+- !private ["Ps28CustomDebugStringConvertible", "SourceLocation"]
+- ["Ps28CustomDebugStringConvertible", "_actualBlock"]
+- ["Ps28CustomDebugStringConvertible", "_file"]
+- ["Ps28CustomDebugStringConvertible", "_line"]
+- ["Ps28CustomDebugStringConvertible", "_negative"]
+- ["Ps28CustomDebugStringConvertible", "_timeout"]
+- !private ["Ps28CustomDebugStringConvertible", "expect"]
+- ["Ps28CustomDebugStringConvertible", "expectValue"]
+- !private ["Ps28CustomDebugStringConvertible", "fail"]
+- ["Ps28CustomDebugStringConvertible", "failWithMessage"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "notTo"]
+- ["Ps28CustomDebugStringConvertible", "notToWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "to"]
+- ["Ps28CustomDebugStringConvertible", "toEventually"]
+- ["Ps28CustomDebugStringConvertible", "toEventuallyNot"]
+- ["Ps28CustomDebugStringConvertible", "toEventuallyNotWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "toEventuallyWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "toNot"]
+- ["Ps28CustomDebugStringConvertible", "toNotEventually"]
+- ["Ps28CustomDebugStringConvertible", "toNotEventuallyWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "toNotWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "toWithDescription"]
+- ["Ps28CustomDebugStringConvertible", "withTimeout"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "ObjCMatcherWrapper"]
+- !private ["Ps23CustomStringConvertible", "SourceLocation"]
+- ["Ps23CustomStringConvertible", "_actualBlock"]
+- ["Ps23CustomStringConvertible", "_file"]
+- ["Ps23CustomStringConvertible", "_line"]
+- ["Ps23CustomStringConvertible", "_negative"]
+- ["Ps23CustomStringConvertible", "_timeout"]
+- !private ["Ps23CustomStringConvertible", "expect"]
+- ["Ps23CustomStringConvertible", "expectValue"]
+- !private ["Ps23CustomStringConvertible", "fail"]
+- ["Ps23CustomStringConvertible", "failWithMessage"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "notTo"]
+- ["Ps23CustomStringConvertible", "notToWithDescription"]
+- ["Ps23CustomStringConvertible", "to"]
+- ["Ps23CustomStringConvertible", "toEventually"]
+- ["Ps23CustomStringConvertible", "toEventuallyNot"]
+- ["Ps23CustomStringConvertible", "toEventuallyNotWithDescription"]
+- ["Ps23CustomStringConvertible", "toEventuallyWithDescription"]
+- ["Ps23CustomStringConvertible", "toNot"]
+- ["Ps23CustomStringConvertible", "toNotEventually"]
+- ["Ps23CustomStringConvertible", "toNotEventuallyWithDescription"]
+- ["Ps23CustomStringConvertible", "toNotWithDescription"]
+- ["Ps23CustomStringConvertible", "toWithDescription"]
+- ["Ps23CustomStringConvertible", "withTimeout"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Sd", "deinit"]
+- !private ["Ps9Equatable", "ObjCMatcherWrapper"]
+- !private ["Ps9Equatable", "SourceLocation"]
+- ["Ps9Equatable", "_actualBlock"]
+- ["Ps9Equatable", "_file"]
+- ["Ps9Equatable", "_line"]
+- ["Ps9Equatable", "_negative"]
+- ["Ps9Equatable", "_timeout"]
+- !private ["Ps9Equatable", "expect"]
+- ["Ps9Equatable", "expectValue"]
+- !private ["Ps9Equatable", "fail"]
+- ["Ps9Equatable", "failWithMessage"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "notTo"]
+- ["Ps9Equatable", "notToWithDescription"]
+- ["Ps9Equatable", "to"]
+- ["Ps9Equatable", "toEventually"]
+- ["Ps9Equatable", "toEventuallyNot"]
+- ["Ps9Equatable", "toEventuallyNotWithDescription"]
+- ["Ps9Equatable", "toEventuallyWithDescription"]
+- ["Ps9Equatable", "toNot"]
+- ["Ps9Equatable", "toNotEventually"]
+- ["Ps9Equatable", "toNotEventuallyWithDescription"]
+- ["Ps9Equatable", "toNotWithDescription"]
+- ["Ps9Equatable", "toWithDescription"]
+- ["Ps9Equatable", "withTimeout"]
+- ["Ps9Equatable", ""]
+- !private ["V6Nimble11Expectation", "deinit"]
+- !private ["V6Nimble11Expectation", "to"]
+- !private ["V6Nimble11Expectation", "toEventually"]
+- !private ["V6Nimble11Expectation", "toEventuallyNot"]
+- !private ["V6Nimble11Expectation", "toNot"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["V6Nimble10Expression", "deinit"]
+- !private ["V6Nimble10Expression", "evaluate"]
+- !private ["V6Nimble10Expression", "location"]
+- ["C6Nimble14FailureMessage", "deinit"]
+- !private ["Ps8Hashable", "ObjCMatcherWrapper"]
+- !private ["Ps8Hashable", "SourceLocation"]
+- ["Ps8Hashable", "_actualBlock"]
+- ["Ps8Hashable", "_file"]
+- ["Ps8Hashable", "_line"]
+- ["Ps8Hashable", "_negative"]
+- ["Ps8Hashable", "_timeout"]
+- !private ["Ps8Hashable", "expect"]
+- ["Ps8Hashable", "expectValue"]
+- !private ["Ps8Hashable", "fail"]
+- ["Ps8Hashable", "failWithMessage"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "notTo"]
+- ["Ps8Hashable", "notToWithDescription"]
+- ["Ps8Hashable", "to"]
+- ["Ps8Hashable", "toEventually"]
+- ["Ps8Hashable", "toEventuallyNot"]
+- ["Ps8Hashable", "toEventuallyNotWithDescription"]
+- ["Ps8Hashable", "toEventuallyWithDescription"]
+- ["Ps8Hashable", "toNot"]
+- ["Ps8Hashable", "toNotEventually"]
+- ["Ps8Hashable", "toNotEventuallyWithDescription"]
+- ["Ps8Hashable", "toNotWithDescription"]
+- ["Ps8Hashable", "toWithDescription"]
+- ["Ps8Hashable", "withTimeout"]
+- ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- ["P6Nimble7Matcher", "ValueType"]
+- ["P6Nimble7Matcher", "doesNotMatch"]
+- !private ["P6Nimble7Matcher", "init"]
+- !private ["P6Nimble7Matcher", "matcher"]
+- ["P6Nimble7Matcher", "matches"]
+- ["P6Nimble7Matcher", ""]
+- ["C6Nimble14NMBExpectation", "Bool"]
+- ["C6Nimble14NMBExpectation", "Expectation"]
+- ["C6Nimble14NMBExpectation", "FileString"]
+- ["C6Nimble14NMBExpectation", "NMBExpectation"]
+- ["C6Nimble14NMBExpectation", "NMBMatcher"]
+- ["C6Nimble14NMBExpectation", "NSObject"]
+- !private ["C6Nimble14NMBExpectation", "ObjCMatcherWrapper"]
+- !private ["C6Nimble14NMBExpectation", "SourceLocation"]
+- ["C6Nimble14NMBExpectation", "String"]
+- ["C6Nimble14NMBExpectation", "TimeInterval"]
+- ["C6Nimble14NMBExpectation", "UInt"]
+- ["C6Nimble14NMBExpectation", "Void"]
+- ["C6Nimble14NMBExpectation", "_actualBlock"]
+- ["C6Nimble14NMBExpectation", "_file"]
+- ["C6Nimble14NMBExpectation", "_line"]
+- ["C6Nimble14NMBExpectation", "_negative"]
+- ["C6Nimble14NMBExpectation", "_timeout"]
+- ["C6Nimble14NMBExpectation", "deinit"]
+- !private ["C6Nimble14NMBExpectation", "expect"]
+- !private ["C6Nimble14NMBExpectation", "expectValue"]
+- !private ["C6Nimble14NMBExpectation", "fail"]
+- ["C6Nimble14NMBExpectation", "failWithMessage"]
+- ["C6Nimble14NMBExpectation", "init"]
+- ["C6Nimble14NMBExpectation", "notTo"]
+- ["C6Nimble14NMBExpectation", "notToWithDescription"]
+- ["C6Nimble14NMBExpectation", "to"]
+- ["C6Nimble14NMBExpectation", "toEventually"]
+- ["C6Nimble14NMBExpectation", "toEventuallyNot"]
+- ["C6Nimble14NMBExpectation", "toEventuallyNotWithDescription"]
+- ["C6Nimble14NMBExpectation", "toEventuallyWithDescription"]
+- ["C6Nimble14NMBExpectation", "toNot"]
+- ["C6Nimble14NMBExpectation", "toNotEventually"]
+- ["C6Nimble14NMBExpectation", "toNotEventuallyWithDescription"]
+- ["C6Nimble14NMBExpectation", "toNotWithDescription"]
+- ["C6Nimble14NMBExpectation", "toWithDescription"]
+- ["C6Nimble14NMBExpectation", "withTimeout"]
+- ["P6Nimble10NMBMatcher", "deinit"]
+- !private ["P6Nimble10NMBMatcher", "doesNotMatch"]
+- !private ["P6Nimble10NMBMatcher", "matches"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "Expectation"]
+- ["CSo8NSObject", "FileString"]
+- ["CSo8NSObject", "NMBExpectation"]
+- ["CSo8NSObject", "NMBMatcher"]
+- ["CSo8NSObject", "NSObject"]
+- !private ["CSo8NSObject", "ObjCMatcherWrapper"]
+- !private ["CSo8NSObject", "SourceLocation"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "TimeInterval"]
+- ["CSo8NSObject", "UInt"]
+- ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "_actualBlock"]
+- ["CSo8NSObject", "_file"]
+- ["CSo8NSObject", "_line"]
+- ["CSo8NSObject", "_negative"]
+- ["CSo8NSObject", "_timeout"]
+- ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "expect"]
+- ["CSo8NSObject", "expectValue"]
+- !private ["CSo8NSObject", "fail"]
+- ["CSo8NSObject", "failWithMessage"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "notTo"]
+- ["CSo8NSObject", "notToWithDescription"]
+- ["CSo8NSObject", "to"]
+- ["CSo8NSObject", "toEventually"]
+- ["CSo8NSObject", "toEventuallyNot"]
+- ["CSo8NSObject", "toEventuallyNotWithDescription"]
+- ["CSo8NSObject", "toEventuallyWithDescription"]
+- ["CSo8NSObject", "toNot"]
+- ["CSo8NSObject", "toNotEventually"]
+- ["CSo8NSObject", "toNotEventuallyWithDescription"]
+- ["CSo8NSObject", "toNotWithDescription"]
+- ["CSo8NSObject", "toWithDescription"]
+- ["CSo8NSObject", "withTimeout"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "ObjCMatcherWrapper"]
+- !private ["PSo16NSObjectProtocol", "SourceLocation"]
+- ["PSo16NSObjectProtocol", "_actualBlock"]
+- ["PSo16NSObjectProtocol", "_file"]
+- ["PSo16NSObjectProtocol", "_line"]
+- ["PSo16NSObjectProtocol", "_negative"]
+- ["PSo16NSObjectProtocol", "_timeout"]
+- !private ["PSo16NSObjectProtocol", "expect"]
+- ["PSo16NSObjectProtocol", "expectValue"]
+- !private ["PSo16NSObjectProtocol", "fail"]
+- ["PSo16NSObjectProtocol", "failWithMessage"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "notTo"]
+- ["PSo16NSObjectProtocol", "notToWithDescription"]
+- ["PSo16NSObjectProtocol", "to"]
+- ["PSo16NSObjectProtocol", "toEventually"]
+- ["PSo16NSObjectProtocol", "toEventuallyNot"]
+- ["PSo16NSObjectProtocol", "toEventuallyNotWithDescription"]
+- ["PSo16NSObjectProtocol", "toEventuallyWithDescription"]
+- ["PSo16NSObjectProtocol", "toNot"]
+- ["PSo16NSObjectProtocol", "toNotEventually"]
+- ["PSo16NSObjectProtocol", "toNotEventuallyWithDescription"]
+- ["PSo16NSObjectProtocol", "toNotWithDescription"]
+- ["PSo16NSObjectProtocol", "toWithDescription"]
+- ["PSo16NSObjectProtocol", "withTimeout"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Os5Never", "deinit"]
+- ["V6Nimble18ObjCMatcherWrapper", "Bool"]
+- ["V6Nimble18ObjCMatcherWrapper", "Expression"]
+- ["V6Nimble18ObjCMatcherWrapper", "FailureMessage"]
+- ["V6Nimble18ObjCMatcherWrapper", "NMBMatcher"]
+- ["V6Nimble18ObjCMatcherWrapper", "NSObject"]
+- ["V6Nimble18ObjCMatcherWrapper", "ValueType"]
+- ["V6Nimble18ObjCMatcherWrapper", "deinit"]
+- ["V6Nimble18ObjCMatcherWrapper", "doesNotMatch"]
+- ["V6Nimble18ObjCMatcherWrapper", "init"]
+- ["V6Nimble18ObjCMatcherWrapper", "matcher"]
+- ["V6Nimble18ObjCMatcherWrapper", "matches"]
+- !private ["Sq", "deinit"]
+- ["C6Nimble14SourceLocation", "deinit"]
+- !private ["C6Nimble14SourceLocation", "init"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- ["Su", "deinit"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps9_Hashable", "ObjCMatcherWrapper"]
+- !private ["Ps9_Hashable", "SourceLocation"]
+- ["Ps9_Hashable", "_actualBlock"]
+- ["Ps9_Hashable", "_file"]
+- ["Ps9_Hashable", "_line"]
+- ["Ps9_Hashable", "_negative"]
+- ["Ps9_Hashable", "_timeout"]
+- !private ["Ps9_Hashable", "expect"]
+- ["Ps9_Hashable", "expectValue"]
+- !private ["Ps9_Hashable", "fail"]
+- ["Ps9_Hashable", "failWithMessage"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "notTo"]
+- ["Ps9_Hashable", "notToWithDescription"]
+- ["Ps9_Hashable", "to"]
+- ["Ps9_Hashable", "toEventually"]
+- ["Ps9_Hashable", "toEventuallyNot"]
+- ["Ps9_Hashable", "toEventuallyNotWithDescription"]
+- ["Ps9_Hashable", "toEventuallyWithDescription"]
+- ["Ps9_Hashable", "toNot"]
+- ["Ps9_Hashable", "toNotEventually"]
+- ["Ps9_Hashable", "toNotEventuallyWithDescription"]
+- ["Ps9_Hashable", "toNotWithDescription"]
+- ["Ps9_Hashable", "toWithDescription"]
+- ["Ps9_Hashable", "withTimeout"]
+- ["Ps9_Hashable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "Ps7CVarArg"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Sd"
+- "Ps9Equatable"
+- !private "V6Nimble11Expectation"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "V6Nimble10Expression"
+- "C6Nimble14FailureMessage"
+- "Ps8Hashable"
+- !private "SQ"
+- "P6Nimble7Matcher"
+- "C6Nimble14NMBExpectation"
+- "P6Nimble10NMBMatcher"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Os5Never"
+- "V6Nimble18ObjCMatcherWrapper"
+- !private "Sq"
+- "C6Nimble14SourceLocation"
+- "Vs12StaticString"
+- "SS"
+- "Su"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Pods.build/Debug-iphoneos/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "25bd77f35dc014242e3b515fdbc4ee27"

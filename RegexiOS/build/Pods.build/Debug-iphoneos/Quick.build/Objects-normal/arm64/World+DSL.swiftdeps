@@ -1,0 +1,742 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["C5Quick5World", ""]
+- ["C5Quick5World", "beforeSuite"]
+- ["C5Quick5World", "afterSuite"]
+- ["C5Quick5World", "sharedExamples"]
+- ["C5Quick5World", "describe"]
+- ["C5Quick5World", "context"]
+- ["C5Quick5World", "fdescribe"]
+- ["C5Quick5World", "xdescribe"]
+- ["C5Quick5World", "beforeEach"]
+- ["C5Quick5World", "beforeEach"]
+- ["C5Quick5World", "afterEach"]
+- ["C5Quick5World", "afterEach"]
+- ["C5Quick5World", "it"]
+- ["C5Quick5World", "fit"]
+- ["C5Quick5World", "xit"]
+- ["C5Quick5World", "itBehavesLike"]
+- ["C5Quick5World", "pending"]
+provides-dynamic-lookup:
+- "beforeSuite"
+- "fdescribe"
+- "xit"
+- "pending"
+- "afterEach"
+- "afterEach"
+- "sharedExamples"
+- "context"
+- "fit"
+- "objc_fit"
+- "it"
+- "beforeEach"
+- "beforeEach"
+- "itBehavesLike"
+- "describe"
+- "afterSuite"
+- "xdescribe"
+- "objc_it"
+- "objc_xit"
+- "objc_itBehavesLike"
+depends-top-level:
+- !private "Callsite"
+- !private "print"
+- "AfterExampleClosure"
+- "UInt"
+- "AssignmentPrecedence"
+- "BeforeExampleClosure"
+- !private "=="
+- "BeforeExampleWithMetadataClosure"
+- "AfterExampleWithMetadataClosure"
+- !private "ExampleGroup"
+- "AfterSuiteClosure"
+- "BeforeSuiteClosure"
+- !private "!="
+- !private "BooleanLiteralType"
+- !private "Example"
+- "World"
+- !private "Filter"
+- "String"
+- "SharedExampleClosure"
+- "FilterFlags"
+- !private "StringLiteralType"
+- "SharedExampleContext"
+- !private "raiseError"
+depends-member:
+- !private ["Ps9AnyObject", "Callsite"]
+- !private ["Ps9AnyObject", "Example"]
+- !private ["Ps9AnyObject", "ExampleGroup"]
+- !private ["Ps9AnyObject", "Filter"]
+- !private ["Ps9AnyObject", "World"]
+- ["Ps9AnyObject", "afterEach"]
+- ["Ps9AnyObject", "afterSuite"]
+- !private ["Ps9AnyObject", "aftersCurrentlyExecuting"]
+- !private ["Ps9AnyObject", "appendAfter"]
+- !private ["Ps9AnyObject", "appendBefore"]
+- !private ["Ps9AnyObject", "appendExample"]
+- !private ["Ps9AnyObject", "appendExampleGroup"]
+- ["Ps9AnyObject", "beforeEach"]
+- ["Ps9AnyObject", "beforeSuite"]
+- !private ["Ps9AnyObject", "beforesCurrentlyExecuting"]
+- !private ["Ps9AnyObject", "callsite"]
+- ["Ps9AnyObject", "context"]
+- !private ["Ps9AnyObject", "currentExampleGroup"]
+- !private ["Ps9AnyObject", "currentExampleMetadata"]
+- ["Ps9AnyObject", "currentPhase"]
+- ["Ps9AnyObject", "describe"]
+- ["Ps9AnyObject", "fdescribe"]
+- ["Ps9AnyObject", "fit"]
+- !private ["Ps9AnyObject", "focused"]
+- !private ["Ps9AnyObject", "hooks"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isSharedExample"]
+- ["Ps9AnyObject", "it"]
+- ["Ps9AnyObject", "itBehavesLike"]
+- ["Ps9AnyObject", "objc_fit"]
+- ["Ps9AnyObject", "objc_it"]
+- ["Ps9AnyObject", "objc_itBehavesLike"]
+- ["Ps9AnyObject", "objc_xit"]
+- ["Ps9AnyObject", "pending"]
+- !private ["Ps9AnyObject", "performWithCurrentExampleGroup"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "raiseError"]
+- !private ["Ps9AnyObject", "registerSharedExample"]
+- !private ["Ps9AnyObject", "sharedExample"]
+- ["Ps9AnyObject", "sharedExamples"]
+- !private ["Ps9AnyObject", "sharedWorld"]
+- !private ["Ps9AnyObject", "suiteHooks"]
+- !private ["Ps9AnyObject", "walkDownExamples"]
+- ["Ps9AnyObject", "xdescribe"]
+- ["Ps9AnyObject", "xit"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "Callsite"]
+- !private ["Ps7CVarArg", "Example"]
+- !private ["Ps7CVarArg", "ExampleGroup"]
+- !private ["Ps7CVarArg", "Filter"]
+- !private ["Ps7CVarArg", "World"]
+- ["Ps7CVarArg", "afterEach"]
+- ["Ps7CVarArg", "afterSuite"]
+- !private ["Ps7CVarArg", "aftersCurrentlyExecuting"]
+- !private ["Ps7CVarArg", "appendExample"]
+- !private ["Ps7CVarArg", "appendExampleGroup"]
+- ["Ps7CVarArg", "beforeEach"]
+- ["Ps7CVarArg", "beforeSuite"]
+- !private ["Ps7CVarArg", "beforesCurrentlyExecuting"]
+- !private ["Ps7CVarArg", "callsite"]
+- ["Ps7CVarArg", "context"]
+- !private ["Ps7CVarArg", "currentExampleGroup"]
+- !private ["Ps7CVarArg", "currentExampleMetadata"]
+- ["Ps7CVarArg", "currentPhase"]
+- ["Ps7CVarArg", "describe"]
+- ["Ps7CVarArg", "fdescribe"]
+- ["Ps7CVarArg", "fit"]
+- !private ["Ps7CVarArg", "focused"]
+- !private ["Ps7CVarArg", "hooks"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isSharedExample"]
+- ["Ps7CVarArg", "it"]
+- ["Ps7CVarArg", "itBehavesLike"]
+- ["Ps7CVarArg", "objc_fit"]
+- ["Ps7CVarArg", "objc_it"]
+- ["Ps7CVarArg", "objc_itBehavesLike"]
+- ["Ps7CVarArg", "objc_xit"]
+- ["Ps7CVarArg", "pending"]
+- !private ["Ps7CVarArg", "performWithCurrentExampleGroup"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "raiseError"]
+- !private ["Ps7CVarArg", "registerSharedExample"]
+- !private ["Ps7CVarArg", "sharedExample"]
+- ["Ps7CVarArg", "sharedExamples"]
+- !private ["Ps7CVarArg", "sharedWorld"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "suiteHooks"]
+- !private ["Ps7CVarArg", "walkDownExamples"]
+- ["Ps7CVarArg", "xdescribe"]
+- ["Ps7CVarArg", "xit"]
+- ["C5Quick8Callsite", "deinit"]
+- !private ["C5Quick8Callsite", "init"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Collection", "Index"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "SubSequence"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Callsite"]
+- !private ["Ps28CustomDebugStringConvertible", "Example"]
+- !private ["Ps28CustomDebugStringConvertible", "ExampleGroup"]
+- !private ["Ps28CustomDebugStringConvertible", "Filter"]
+- !private ["Ps28CustomDebugStringConvertible", "World"]
+- ["Ps28CustomDebugStringConvertible", "afterEach"]
+- ["Ps28CustomDebugStringConvertible", "afterSuite"]
+- !private ["Ps28CustomDebugStringConvertible", "aftersCurrentlyExecuting"]
+- !private ["Ps28CustomDebugStringConvertible", "appendExample"]
+- !private ["Ps28CustomDebugStringConvertible", "appendExampleGroup"]
+- ["Ps28CustomDebugStringConvertible", "beforeEach"]
+- ["Ps28CustomDebugStringConvertible", "beforeSuite"]
+- !private ["Ps28CustomDebugStringConvertible", "beforesCurrentlyExecuting"]
+- !private ["Ps28CustomDebugStringConvertible", "callsite"]
+- ["Ps28CustomDebugStringConvertible", "context"]
+- !private ["Ps28CustomDebugStringConvertible", "currentExampleGroup"]
+- !private ["Ps28CustomDebugStringConvertible", "currentExampleMetadata"]
+- ["Ps28CustomDebugStringConvertible", "currentPhase"]
+- ["Ps28CustomDebugStringConvertible", "describe"]
+- ["Ps28CustomDebugStringConvertible", "fdescribe"]
+- ["Ps28CustomDebugStringConvertible", "fit"]
+- !private ["Ps28CustomDebugStringConvertible", "focused"]
+- !private ["Ps28CustomDebugStringConvertible", "hooks"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isSharedExample"]
+- ["Ps28CustomDebugStringConvertible", "it"]
+- ["Ps28CustomDebugStringConvertible", "itBehavesLike"]
+- ["Ps28CustomDebugStringConvertible", "objc_fit"]
+- ["Ps28CustomDebugStringConvertible", "objc_it"]
+- ["Ps28CustomDebugStringConvertible", "objc_itBehavesLike"]
+- ["Ps28CustomDebugStringConvertible", "objc_xit"]
+- ["Ps28CustomDebugStringConvertible", "pending"]
+- !private ["Ps28CustomDebugStringConvertible", "performWithCurrentExampleGroup"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "raiseError"]
+- !private ["Ps28CustomDebugStringConvertible", "registerSharedExample"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedExample"]
+- ["Ps28CustomDebugStringConvertible", "sharedExamples"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedWorld"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "suiteHooks"]
+- !private ["Ps28CustomDebugStringConvertible", "walkDownExamples"]
+- ["Ps28CustomDebugStringConvertible", "xdescribe"]
+- ["Ps28CustomDebugStringConvertible", "xit"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "Callsite"]
+- !private ["Ps23CustomStringConvertible", "Example"]
+- !private ["Ps23CustomStringConvertible", "ExampleGroup"]
+- !private ["Ps23CustomStringConvertible", "Filter"]
+- !private ["Ps23CustomStringConvertible", "World"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "afterEach"]
+- ["Ps23CustomStringConvertible", "afterSuite"]
+- !private ["Ps23CustomStringConvertible", "aftersCurrentlyExecuting"]
+- !private ["Ps23CustomStringConvertible", "appendExample"]
+- !private ["Ps23CustomStringConvertible", "appendExampleGroup"]
+- ["Ps23CustomStringConvertible", "beforeEach"]
+- ["Ps23CustomStringConvertible", "beforeSuite"]
+- !private ["Ps23CustomStringConvertible", "beforesCurrentlyExecuting"]
+- !private ["Ps23CustomStringConvertible", "callsite"]
+- ["Ps23CustomStringConvertible", "context"]
+- !private ["Ps23CustomStringConvertible", "currentExampleGroup"]
+- !private ["Ps23CustomStringConvertible", "currentExampleMetadata"]
+- ["Ps23CustomStringConvertible", "currentPhase"]
+- ["Ps23CustomStringConvertible", "describe"]
+- ["Ps23CustomStringConvertible", "fdescribe"]
+- ["Ps23CustomStringConvertible", "fit"]
+- !private ["Ps23CustomStringConvertible", "focused"]
+- !private ["Ps23CustomStringConvertible", "hooks"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isSharedExample"]
+- ["Ps23CustomStringConvertible", "it"]
+- ["Ps23CustomStringConvertible", "itBehavesLike"]
+- ["Ps23CustomStringConvertible", "objc_fit"]
+- ["Ps23CustomStringConvertible", "objc_it"]
+- ["Ps23CustomStringConvertible", "objc_itBehavesLike"]
+- ["Ps23CustomStringConvertible", "objc_xit"]
+- ["Ps23CustomStringConvertible", "pending"]
+- !private ["Ps23CustomStringConvertible", "performWithCurrentExampleGroup"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "raiseError"]
+- !private ["Ps23CustomStringConvertible", "registerSharedExample"]
+- !private ["Ps23CustomStringConvertible", "sharedExample"]
+- ["Ps23CustomStringConvertible", "sharedExamples"]
+- !private ["Ps23CustomStringConvertible", "sharedWorld"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "suiteHooks"]
+- !private ["Ps23CustomStringConvertible", "walkDownExamples"]
+- ["Ps23CustomStringConvertible", "xdescribe"]
+- ["Ps23CustomStringConvertible", "xit"]
+- ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Callsite"]
+- !private ["Ps9Equatable", "Example"]
+- !private ["Ps9Equatable", "ExampleGroup"]
+- !private ["Ps9Equatable", "Filter"]
+- !private ["Ps9Equatable", "World"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "afterEach"]
+- ["Ps9Equatable", "afterSuite"]
+- !private ["Ps9Equatable", "aftersCurrentlyExecuting"]
+- !private ["Ps9Equatable", "appendExample"]
+- !private ["Ps9Equatable", "appendExampleGroup"]
+- ["Ps9Equatable", "beforeEach"]
+- ["Ps9Equatable", "beforeSuite"]
+- !private ["Ps9Equatable", "beforesCurrentlyExecuting"]
+- !private ["Ps9Equatable", "callsite"]
+- ["Ps9Equatable", "context"]
+- !private ["Ps9Equatable", "currentExampleGroup"]
+- !private ["Ps9Equatable", "currentExampleMetadata"]
+- ["Ps9Equatable", "currentPhase"]
+- ["Ps9Equatable", "describe"]
+- ["Ps9Equatable", "fdescribe"]
+- ["Ps9Equatable", "fit"]
+- !private ["Ps9Equatable", "focused"]
+- !private ["Ps9Equatable", "hooks"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isSharedExample"]
+- ["Ps9Equatable", "it"]
+- ["Ps9Equatable", "itBehavesLike"]
+- ["Ps9Equatable", "objc_fit"]
+- ["Ps9Equatable", "objc_it"]
+- ["Ps9Equatable", "objc_itBehavesLike"]
+- ["Ps9Equatable", "objc_xit"]
+- ["Ps9Equatable", "pending"]
+- !private ["Ps9Equatable", "performWithCurrentExampleGroup"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "raiseError"]
+- !private ["Ps9Equatable", "registerSharedExample"]
+- !private ["Ps9Equatable", "sharedExample"]
+- ["Ps9Equatable", "sharedExamples"]
+- !private ["Ps9Equatable", "sharedWorld"]
+- !private ["Ps9Equatable", "suiteHooks"]
+- !private ["Ps9Equatable", "walkDownExamples"]
+- ["Ps9Equatable", "xdescribe"]
+- ["Ps9Equatable", "xit"]
+- !private ["C5Quick7Example", "callsite"]
+- ["C5Quick7Example", "deinit"]
+- !private ["C5Quick7Example", "init"]
+- !private ["C5Quick7Example", "isSharedExample"]
+- !private ["C5Quick12ExampleGroup", "appendExample"]
+- !private ["C5Quick12ExampleGroup", "appendExampleGroup"]
+- ["C5Quick12ExampleGroup", "deinit"]
+- !private ["C5Quick12ExampleGroup", "hooks"]
+- !private ["C5Quick12ExampleGroup", "init"]
+- !private ["C5Quick12ExampleGroup", "walkDownExamples"]
+- !private ["C5Quick12ExampleHooks", "appendAfter"]
+- !private ["C5Quick12ExampleHooks", "appendBefore"]
+- ["C5Quick12ExampleHooks", "deinit"]
+- !private ["C5Quick15ExampleMetadata", "deinit"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["C5Quick6Filter", "focused"]
+- !private ["C5Quick6Filter", "pending"]
+- !private ["Sf", "deinit"]
+- !private ["Ps8Hashable", "Callsite"]
+- !private ["Ps8Hashable", "Example"]
+- !private ["Ps8Hashable", "ExampleGroup"]
+- !private ["Ps8Hashable", "Filter"]
+- !private ["Ps8Hashable", "World"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "afterEach"]
+- ["Ps8Hashable", "afterSuite"]
+- !private ["Ps8Hashable", "aftersCurrentlyExecuting"]
+- !private ["Ps8Hashable", "appendExample"]
+- !private ["Ps8Hashable", "appendExampleGroup"]
+- ["Ps8Hashable", "beforeEach"]
+- ["Ps8Hashable", "beforeSuite"]
+- !private ["Ps8Hashable", "beforesCurrentlyExecuting"]
+- !private ["Ps8Hashable", "callsite"]
+- ["Ps8Hashable", "context"]
+- !private ["Ps8Hashable", "currentExampleGroup"]
+- !private ["Ps8Hashable", "currentExampleMetadata"]
+- ["Ps8Hashable", "currentPhase"]
+- ["Ps8Hashable", "describe"]
+- ["Ps8Hashable", "fdescribe"]
+- ["Ps8Hashable", "fit"]
+- !private ["Ps8Hashable", "focused"]
+- !private ["Ps8Hashable", "hooks"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isSharedExample"]
+- ["Ps8Hashable", "it"]
+- ["Ps8Hashable", "itBehavesLike"]
+- ["Ps8Hashable", "objc_fit"]
+- ["Ps8Hashable", "objc_it"]
+- ["Ps8Hashable", "objc_itBehavesLike"]
+- ["Ps8Hashable", "objc_xit"]
+- ["Ps8Hashable", "pending"]
+- !private ["Ps8Hashable", "performWithCurrentExampleGroup"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "raiseError"]
+- !private ["Ps8Hashable", "registerSharedExample"]
+- !private ["Ps8Hashable", "sharedExample"]
+- ["Ps8Hashable", "sharedExamples"]
+- !private ["Ps8Hashable", "sharedWorld"]
+- !private ["Ps8Hashable", "suiteHooks"]
+- !private ["Ps8Hashable", "walkDownExamples"]
+- ["Ps8Hashable", "xdescribe"]
+- ["Ps8Hashable", "xit"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Ps13IndexableBase", "Index"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "SubSequence"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "subscript"]
+- !private ["Vs16IndexingIterator", "Element"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AfterExampleClosure"]
+- ["CSo8NSObject", "AfterExampleWithMetadataClosure"]
+- ["CSo8NSObject", "AfterSuiteClosure"]
+- ["CSo8NSObject", "BeforeExampleClosure"]
+- ["CSo8NSObject", "BeforeExampleWithMetadataClosure"]
+- ["CSo8NSObject", "BeforeSuiteClosure"]
+- !private ["CSo8NSObject", "Callsite"]
+- !private ["CSo8NSObject", "Example"]
+- !private ["CSo8NSObject", "ExampleGroup"]
+- !private ["CSo8NSObject", "Filter"]
+- ["CSo8NSObject", "FilterFlags"]
+- ["CSo8NSObject", "SharedExampleClosure"]
+- ["CSo8NSObject", "SharedExampleContext"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UInt"]
+- !private ["CSo8NSObject", "World"]
+- ["CSo8NSObject", "afterEach"]
+- ["CSo8NSObject", "afterSuite"]
+- !private ["CSo8NSObject", "aftersCurrentlyExecuting"]
+- !private ["CSo8NSObject", "appendExample"]
+- !private ["CSo8NSObject", "appendExampleGroup"]
+- ["CSo8NSObject", "beforeEach"]
+- ["CSo8NSObject", "beforeSuite"]
+- !private ["CSo8NSObject", "beforesCurrentlyExecuting"]
+- !private ["CSo8NSObject", "callsite"]
+- ["CSo8NSObject", "context"]
+- !private ["CSo8NSObject", "currentExampleGroup"]
+- !private ["CSo8NSObject", "currentExampleMetadata"]
+- ["CSo8NSObject", "currentPhase"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "describe"]
+- ["CSo8NSObject", "fdescribe"]
+- ["CSo8NSObject", "fit"]
+- !private ["CSo8NSObject", "focused"]
+- !private ["CSo8NSObject", "hooks"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isSharedExample"]
+- ["CSo8NSObject", "it"]
+- ["CSo8NSObject", "itBehavesLike"]
+- ["CSo8NSObject", "objc_fit"]
+- ["CSo8NSObject", "objc_it"]
+- ["CSo8NSObject", "objc_itBehavesLike"]
+- ["CSo8NSObject", "objc_xit"]
+- ["CSo8NSObject", "pending"]
+- !private ["CSo8NSObject", "performWithCurrentExampleGroup"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "raiseError"]
+- !private ["CSo8NSObject", "registerSharedExample"]
+- !private ["CSo8NSObject", "sharedExample"]
+- ["CSo8NSObject", "sharedExamples"]
+- !private ["CSo8NSObject", "sharedWorld"]
+- !private ["CSo8NSObject", "suiteHooks"]
+- !private ["CSo8NSObject", "walkDownExamples"]
+- ["CSo8NSObject", "xdescribe"]
+- ["CSo8NSObject", "xit"]
+- !private ["PSo16NSObjectProtocol", "Callsite"]
+- !private ["PSo16NSObjectProtocol", "Example"]
+- !private ["PSo16NSObjectProtocol", "ExampleGroup"]
+- !private ["PSo16NSObjectProtocol", "Filter"]
+- !private ["PSo16NSObjectProtocol", "World"]
+- ["PSo16NSObjectProtocol", "afterEach"]
+- ["PSo16NSObjectProtocol", "afterSuite"]
+- !private ["PSo16NSObjectProtocol", "aftersCurrentlyExecuting"]
+- !private ["PSo16NSObjectProtocol", "appendExample"]
+- !private ["PSo16NSObjectProtocol", "appendExampleGroup"]
+- ["PSo16NSObjectProtocol", "beforeEach"]
+- ["PSo16NSObjectProtocol", "beforeSuite"]
+- !private ["PSo16NSObjectProtocol", "beforesCurrentlyExecuting"]
+- !private ["PSo16NSObjectProtocol", "callsite"]
+- ["PSo16NSObjectProtocol", "context"]
+- !private ["PSo16NSObjectProtocol", "currentExampleGroup"]
+- !private ["PSo16NSObjectProtocol", "currentExampleMetadata"]
+- ["PSo16NSObjectProtocol", "currentPhase"]
+- ["PSo16NSObjectProtocol", "describe"]
+- ["PSo16NSObjectProtocol", "fdescribe"]
+- ["PSo16NSObjectProtocol", "fit"]
+- !private ["PSo16NSObjectProtocol", "focused"]
+- !private ["PSo16NSObjectProtocol", "hooks"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isSharedExample"]
+- ["PSo16NSObjectProtocol", "it"]
+- ["PSo16NSObjectProtocol", "itBehavesLike"]
+- ["PSo16NSObjectProtocol", "objc_fit"]
+- ["PSo16NSObjectProtocol", "objc_it"]
+- ["PSo16NSObjectProtocol", "objc_itBehavesLike"]
+- ["PSo16NSObjectProtocol", "objc_xit"]
+- ["PSo16NSObjectProtocol", "pending"]
+- !private ["PSo16NSObjectProtocol", "performWithCurrentExampleGroup"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "raiseError"]
+- !private ["PSo16NSObjectProtocol", "registerSharedExample"]
+- !private ["PSo16NSObjectProtocol", "sharedExample"]
+- ["PSo16NSObjectProtocol", "sharedExamples"]
+- !private ["PSo16NSObjectProtocol", "sharedWorld"]
+- !private ["PSo16NSObjectProtocol", "suiteHooks"]
+- !private ["PSo16NSObjectProtocol", "walkDownExamples"]
+- ["PSo16NSObjectProtocol", "xdescribe"]
+- ["PSo16NSObjectProtocol", "xit"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Index"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "SubSequence"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "Iterator"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["C5Quick10SuiteHooks", "appendAfter"]
+- !private ["C5Quick10SuiteHooks", "appendBefore"]
+- ["C5Quick10SuiteHooks", "deinit"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- ["C5Quick5World", "AfterExampleClosure"]
+- ["C5Quick5World", "AfterExampleWithMetadataClosure"]
+- ["C5Quick5World", "AfterSuiteClosure"]
+- ["C5Quick5World", "BeforeExampleClosure"]
+- ["C5Quick5World", "BeforeExampleWithMetadataClosure"]
+- ["C5Quick5World", "BeforeSuiteClosure"]
+- !private ["C5Quick5World", "Callsite"]
+- !private ["C5Quick5World", "Example"]
+- !private ["C5Quick5World", "ExampleGroup"]
+- !private ["C5Quick5World", "Filter"]
+- ["C5Quick5World", "FilterFlags"]
+- ["C5Quick5World", "SharedExampleClosure"]
+- ["C5Quick5World", "SharedExampleContext"]
+- ["C5Quick5World", "String"]
+- ["C5Quick5World", "UInt"]
+- !private ["C5Quick5World", "World"]
+- ["C5Quick5World", "afterEach"]
+- ["C5Quick5World", "afterSuite"]
+- !private ["C5Quick5World", "aftersCurrentlyExecuting"]
+- ["C5Quick5World", "beforeEach"]
+- ["C5Quick5World", "beforeSuite"]
+- !private ["C5Quick5World", "beforesCurrentlyExecuting"]
+- ["C5Quick5World", "context"]
+- !private ["C5Quick5World", "currentExampleGroup"]
+- !private ["C5Quick5World", "currentExampleMetadata"]
+- !private ["C5Quick5World", "currentPhase"]
+- ["C5Quick5World", "deinit"]
+- ["C5Quick5World", "describe"]
+- ["C5Quick5World", "fdescribe"]
+- ["C5Quick5World", "fit"]
+- ["C5Quick5World", "it"]
+- ["C5Quick5World", "itBehavesLike"]
+- !private ["C5Quick5World", "objc_fit"]
+- !private ["C5Quick5World", "objc_it"]
+- !private ["C5Quick5World", "objc_itBehavesLike"]
+- !private ["C5Quick5World", "objc_xit"]
+- ["C5Quick5World", "pending"]
+- !private ["C5Quick5World", "performWithCurrentExampleGroup"]
+- !private ["C5Quick5World", "print"]
+- !private ["C5Quick5World", "raiseError"]
+- !private ["C5Quick5World", "registerSharedExample"]
+- !private ["C5Quick5World", "sharedExample"]
+- ["C5Quick5World", "sharedExamples"]
+- !private ["C5Quick5World", "sharedWorld"]
+- !private ["C5Quick5World", "suiteHooks"]
+- ["C5Quick5World", "xdescribe"]
+- ["C5Quick5World", "xit"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Callsite"]
+- !private ["Ps9_Hashable", "Example"]
+- !private ["Ps9_Hashable", "ExampleGroup"]
+- !private ["Ps9_Hashable", "Filter"]
+- !private ["Ps9_Hashable", "World"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "afterEach"]
+- ["Ps9_Hashable", "afterSuite"]
+- !private ["Ps9_Hashable", "aftersCurrentlyExecuting"]
+- !private ["Ps9_Hashable", "appendExample"]
+- !private ["Ps9_Hashable", "appendExampleGroup"]
+- ["Ps9_Hashable", "beforeEach"]
+- ["Ps9_Hashable", "beforeSuite"]
+- !private ["Ps9_Hashable", "beforesCurrentlyExecuting"]
+- !private ["Ps9_Hashable", "callsite"]
+- ["Ps9_Hashable", "context"]
+- !private ["Ps9_Hashable", "currentExampleGroup"]
+- !private ["Ps9_Hashable", "currentExampleMetadata"]
+- ["Ps9_Hashable", "currentPhase"]
+- ["Ps9_Hashable", "describe"]
+- ["Ps9_Hashable", "fdescribe"]
+- ["Ps9_Hashable", "fit"]
+- !private ["Ps9_Hashable", "focused"]
+- !private ["Ps9_Hashable", "hooks"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isSharedExample"]
+- ["Ps9_Hashable", "it"]
+- ["Ps9_Hashable", "itBehavesLike"]
+- ["Ps9_Hashable", "objc_fit"]
+- ["Ps9_Hashable", "objc_it"]
+- ["Ps9_Hashable", "objc_itBehavesLike"]
+- ["Ps9_Hashable", "objc_xit"]
+- ["Ps9_Hashable", "pending"]
+- !private ["Ps9_Hashable", "performWithCurrentExampleGroup"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "raiseError"]
+- !private ["Ps9_Hashable", "registerSharedExample"]
+- !private ["Ps9_Hashable", "sharedExample"]
+- ["Ps9_Hashable", "sharedExamples"]
+- !private ["Ps9_Hashable", "sharedWorld"]
+- !private ["Ps9_Hashable", "suiteHooks"]
+- !private ["Ps9_Hashable", "walkDownExamples"]
+- ["Ps9_Hashable", "xdescribe"]
+- ["Ps9_Hashable", "xit"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "Ps7CVarArg"
+- "C5Quick8Callsite"
+- !private "Vs9Character"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- !private "Sd"
+- "Ps9Equatable"
+- "C5Quick7Example"
+- "C5Quick12ExampleGroup"
+- "C5Quick12ExampleHooks"
+- !private "C5Quick15ExampleMetadata"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "C5Quick6Filter"
+- !private "Sf"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Os5Never"
+- "Sq"
+- !private "Ps8Sequence"
+- !private "Vs5Slice"
+- "SS"
+- "C5Quick10SuiteHooks"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- "C5Quick5World"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Target Support Files/Quick/Quick-umbrella.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Pods.build/Debug-iphoneos/Quick.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "c500425195c6c9186b8da21b7c2daf88"

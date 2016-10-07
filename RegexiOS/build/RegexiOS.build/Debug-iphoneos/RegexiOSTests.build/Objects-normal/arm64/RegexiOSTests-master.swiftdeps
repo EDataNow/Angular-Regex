@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "344a5f1bc57a1e2a64207314b57d5174"
+build_time: [529179461, 732691000]
+inputs:
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/RegexiOSTests/RegExProcessorSpec.swift": [529179138, 0]

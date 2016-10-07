@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "394cde29958e64c75ef40cd28d990e2b"
+build_time: [529179459, 115965000]
+inputs:
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/RegexiOS/ViewController.swift": [529177971, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/RegexiOS/AppDelegate.swift": [529177971, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/RegExProcessor.swift": [529178618, 0]

@@ -1,0 +1,22 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "bae27604bc793ddd480e0a009d2d67e4"
+build_time: [529179456, 444668000]
+inputs:
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Callsite.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Hooks/Closures.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Configuration/Configuration.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/DSL/DSL.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/ErrorUtility.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Example.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/ExampleGroup.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Hooks/ExampleHooks.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/ExampleMetadata.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Filter.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Hooks/HooksPhase.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/NSBundle+CurrentTestBundle.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/QuickSelectedTestSuiteBuilder.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/QuickTestSuite.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/String+FileName.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/Hooks/SuiteHooks.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/DSL/World+DSL.swift": [529178736, 0]
+  "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Quick/Sources/Quick/World.swift": [529178736, 0]

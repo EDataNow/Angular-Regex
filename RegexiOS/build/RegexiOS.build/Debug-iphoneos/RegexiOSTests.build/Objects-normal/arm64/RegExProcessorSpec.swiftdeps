@@ -1,0 +1,264 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RegExProcessorSpec"
+provides-nominal:
+- "C13RegexiOSTests18RegExProcessorSpec"
+provides-member:
+- ["C13RegexiOSTests18RegExProcessorSpec", ""]
+provides-dynamic-lookup:
+- "spec"
+depends-top-level:
+- !private "it"
+- !private "StringLiteralType"
+- !private "expect"
+- "BooleanLiteralType"
+- !private "describe"
+- !private "beFalse"
+- "RegExProcessorSpec"
+- !private "beTrue"
+- "QuickSpec"
+depends-member:
+- !private ["Ps9AnyObject", "beFalse"]
+- !private ["Ps9AnyObject", "beTrue"]
+- !private ["Ps9AnyObject", "describe"]
+- !private ["Ps9AnyObject", "expect"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "it"]
+- ["Ps9AnyObject", "spec"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "beFalse"]
+- !private ["Ps7CVarArg", "beTrue"]
+- !private ["Ps7CVarArg", "describe"]
+- !private ["Ps7CVarArg", "expect"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "it"]
+- ["Ps7CVarArg", "spec"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "beFalse"]
+- !private ["Ps28CustomDebugStringConvertible", "beTrue"]
+- !private ["Ps28CustomDebugStringConvertible", "describe"]
+- !private ["Ps28CustomDebugStringConvertible", "expect"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "it"]
+- ["Ps28CustomDebugStringConvertible", "spec"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "beFalse"]
+- !private ["Ps23CustomStringConvertible", "beTrue"]
+- !private ["Ps23CustomStringConvertible", "describe"]
+- !private ["Ps23CustomStringConvertible", "expect"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "it"]
+- ["Ps23CustomStringConvertible", "spec"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "beFalse"]
+- !private ["Ps9Equatable", "beTrue"]
+- !private ["Ps9Equatable", "describe"]
+- !private ["Ps9Equatable", "expect"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "it"]
+- ["Ps9Equatable", "spec"]
+- ["Ps9Equatable", ""]
+- !private ["V6Nimble11Expectation", "deinit"]
+- !private ["V6Nimble11Expectation", "to"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "beFalse"]
+- !private ["Ps8Hashable", "beTrue"]
+- !private ["Ps8Hashable", "describe"]
+- !private ["Ps8Hashable", "expect"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "it"]
+- ["Ps8Hashable", "spec"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["P6Nimble7Matcher", "ValueType"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["P6Nimble13NMBComparable", "init"]
+- !private ["P6Nimble10NMBMatcher", "deinit"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "beFalse"]
+- !private ["CSo8NSObject", "beTrue"]
+- !private ["CSo8NSObject", "describe"]
+- !private ["CSo8NSObject", "expect"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "it"]
+- ["CSo8NSObject", "spec"]
+- !private ["PSo16NSObjectProtocol", "beFalse"]
+- !private ["PSo16NSObjectProtocol", "beTrue"]
+- !private ["PSo16NSObjectProtocol", "describe"]
+- !private ["PSo16NSObjectProtocol", "expect"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "it"]
+- ["PSo16NSObjectProtocol", "spec"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["V6Nimble17NonNilMatcherFunc", "ValueType"]
+- !private ["V6Nimble17NonNilMatcherFunc", "deinit"]
+- ["Sq", "deinit"]
+- !private ["CSo9QuickSpec", "beFalse"]
+- !private ["CSo9QuickSpec", "beTrue"]
+- ["CSo9QuickSpec", "deinit"]
+- !private ["CSo9QuickSpec", "describe"]
+- !private ["CSo9QuickSpec", "expect"]
+- ["CSo9QuickSpec", "init"]
+- !private ["CSo9QuickSpec", "it"]
+- ["CSo9QuickSpec", "spec"]
+- ["CSo9QuickSpec", ""]
+- !private ["C13RegexiOSTests18RegExProcessorSpec", "beFalse"]
+- !private ["C13RegexiOSTests18RegExProcessorSpec", "beTrue"]
+- ["C13RegexiOSTests18RegExProcessorSpec", "deinit"]
+- !private ["C13RegexiOSTests18RegExProcessorSpec", "describe"]
+- !private ["C13RegexiOSTests18RegExProcessorSpec", "expect"]
+- ["C13RegexiOSTests18RegExProcessorSpec", "init"]
+- !private ["C13RegexiOSTests18RegExProcessorSpec", "it"]
+- ["C13RegexiOSTests18RegExProcessorSpec", "spec"]
+- ["V10ObjectiveC8Selector", "deinit"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Su", "deinit"]
+- !private ["CSo6XCTest", "beFalse"]
+- !private ["CSo6XCTest", "beTrue"]
+- !private ["CSo6XCTest", "describe"]
+- !private ["CSo6XCTest", "expect"]
+- ["CSo6XCTest", "init"]
+- !private ["CSo6XCTest", "it"]
+- ["CSo6XCTest", "spec"]
+- !private ["CSo10XCTestCase", "beFalse"]
+- !private ["CSo10XCTestCase", "beTrue"]
+- !private ["CSo10XCTestCase", "describe"]
+- !private ["CSo10XCTestCase", "expect"]
+- ["CSo10XCTestCase", "init"]
+- !private ["CSo10XCTestCase", "it"]
+- ["CSo10XCTestCase", "spec"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "beFalse"]
+- !private ["Ps9_Hashable", "beTrue"]
+- !private ["Ps9_Hashable", "describe"]
+- !private ["Ps9_Hashable", "expect"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "it"]
+- ["Ps9_Hashable", "spec"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "V6Nimble11Expectation"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "P6Nimble7Matcher"
+- !private "Ps10MirrorPath"
+- !private "P6Nimble13NMBComparable"
+- !private "P6Nimble10NMBMatcher"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "V6Nimble17NonNilMatcherFunc"
+- "Sq"
+- "CSo9QuickSpec"
+- "C13RegexiOSTests18RegExProcessorSpec"
+- "V10ObjectiveC8Selector"
+- "SS"
+- !private "P6Nimble27TestOutputStringConvertible"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Su"
+- "CSo6XCTest"
+- "CSo10XCTestCase"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Modules/Quick.swiftmodule/arm64.swiftmodule"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/Quick-Swift.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/QuickSpec.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/Quick.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/QCKDSL.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/QuickConfiguration.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Headers/Quick-umbrella.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Quick/Quick.framework/Modules/module.modulemap"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Modules/Nimble.swiftmodule/arm64.swiftmodule"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/Nimble-Swift.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/DSL.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/NMBStringify.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/NMBExceptionCapture.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/Nimble.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Headers/Nimble-umbrella.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/Nimble/Nimble.framework/Modules/module.modulemap"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Debug-iphoneos/RegexiOS.swiftmodule/arm64.swiftmodule"
+interface-hash: "6fce72cc492e26182b8e43f2aa4ac159"

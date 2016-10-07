@@ -1,0 +1,636 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "raiseException"
+- "setFailureMessageForException"
+- "exceptionMatchesNonNilFieldsOrClosure"
+- "NMBObjCRaiseExceptionMatcher"
+provides-nominal:
+- "C6Nimble28NMBObjCRaiseExceptionMatcher"
+provides-member:
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", ""]
+- ["C6Nimble14NMBObjCMatcher", ""]
+- ["C6Nimble14NMBObjCMatcher", "raiseExceptionMatcher"]
+provides-dynamic-lookup:
+- "_name"
+- "named"
+- "_block"
+- "raiseExceptionMatcher"
+- "satisfyingBlock"
+- "matches"
+- "doesNotMatch"
+- "_userInfo"
+- "reason"
+- "_reason"
+- "userInfo"
+depends-top-level:
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- "raiseException"
+- !private "&&"
+- !private "stringify"
+- !private "Expression"
+- "NSObject"
+- "NMBObjCMatcher"
+- "NSException"
+- "exceptionMatchesNonNilFieldsOrClosure"
+- !private "!"
+- !private "!="
+- "MatcherFunc"
+- !private "gatherFailingExpectations"
+- "setFailureMessageForException"
+- !private "BooleanLiteralType"
+- "Void"
+- "NSDictionary"
+- !private "+="
+- !private "NMBExceptionCapture"
+- "String"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "=="
+- "Bool"
+- !private ">"
+- "FailureMessage"
+- "NMBObjCRaiseExceptionMatcher"
+- "NMBMatcher"
+- "SourceLocation"
+depends-member:
+- !private ["Ps9AnyObject", "Expression"]
+- !private ["Ps9AnyObject", "NMBObjCRaiseExceptionMatcher"]
+- ["Ps9AnyObject", "_block"]
+- ["Ps9AnyObject", "_name"]
+- ["Ps9AnyObject", "_reason"]
+- ["Ps9AnyObject", "_userInfo"]
+- !private ["Ps9AnyObject", "actualValue"]
+- ["Ps9AnyObject", "doesNotMatch"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "matches"]
+- !private ["Ps9AnyObject", "name"]
+- ["Ps9AnyObject", "named"]
+- !private ["Ps9AnyObject", "postfixMessage"]
+- !private ["Ps9AnyObject", "raiseException"]
+- ["Ps9AnyObject", "raiseExceptionMatcher"]
+- ["Ps9AnyObject", "reason"]
+- ["Ps9AnyObject", "satisfyingBlock"]
+- !private ["Ps9AnyObject", "tryBlock"]
+- ["Ps9AnyObject", "userInfo"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "IndexDistance"]
+- !private ["Sa", "Iterator"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "count"]
+- ["Sa", "deinit"]
+- !private ["Sa", "map"]
+- !private ["V6Nimble15AssertionRecord", "deinit"]
+- !private ["V6Nimble15AssertionRecord", "message"]
+- !private ["Ps23BidirectionalCollection", "IndexDistance"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "map"]
+- !private ["Ps22BidirectionalIndexable", "IndexDistance"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "count"]
+- !private ["Ps22BidirectionalIndexable", "map"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "Expression"]
+- !private ["Ps7CVarArg", "IndexDistance"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "NMBObjCRaiseExceptionMatcher"]
+- !private ["Ps7CVarArg", "_Element"]
+- ["Ps7CVarArg", "_block"]
+- ["Ps7CVarArg", "_name"]
+- ["Ps7CVarArg", "_reason"]
+- ["Ps7CVarArg", "_userInfo"]
+- !private ["Ps7CVarArg", "actualValue"]
+- !private ["Ps7CVarArg", "count"]
+- ["Ps7CVarArg", "doesNotMatch"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "map"]
+- ["Ps7CVarArg", "matches"]
+- !private ["Ps7CVarArg", "name"]
+- ["Ps7CVarArg", "named"]
+- !private ["Ps7CVarArg", "postfixMessage"]
+- !private ["Ps7CVarArg", "raiseException"]
+- ["Ps7CVarArg", "raiseExceptionMatcher"]
+- ["Ps7CVarArg", "reason"]
+- ["Ps7CVarArg", "satisfyingBlock"]
+- !private ["Ps7CVarArg", "tryBlock"]
+- ["Ps7CVarArg", "userInfo"]
+- ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Collection", "IndexDistance"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "map"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "rawValue"]
+- !private ["Ps28CustomDebugStringConvertible", "Expression"]
+- !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "NMBObjCRaiseExceptionMatcher"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- ["Ps28CustomDebugStringConvertible", "_block"]
+- ["Ps28CustomDebugStringConvertible", "_name"]
+- ["Ps28CustomDebugStringConvertible", "_reason"]
+- ["Ps28CustomDebugStringConvertible", "_userInfo"]
+- !private ["Ps28CustomDebugStringConvertible", "actualValue"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- ["Ps28CustomDebugStringConvertible", "doesNotMatch"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "map"]
+- ["Ps28CustomDebugStringConvertible", "matches"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- ["Ps28CustomDebugStringConvertible", "named"]
+- !private ["Ps28CustomDebugStringConvertible", "postfixMessage"]
+- !private ["Ps28CustomDebugStringConvertible", "raiseException"]
+- ["Ps28CustomDebugStringConvertible", "raiseExceptionMatcher"]
+- ["Ps28CustomDebugStringConvertible", "reason"]
+- ["Ps28CustomDebugStringConvertible", "satisfyingBlock"]
+- ["Ps28CustomDebugStringConvertible", "some"]
+- !private ["Ps28CustomDebugStringConvertible", "tryBlock"]
+- ["Ps28CustomDebugStringConvertible", "userInfo"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "IndexDistance"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_Element"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "count"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "map"]
+- ["Ps17CustomReflectable", "some"]
+- !private ["Ps23CustomStringConvertible", "Expression"]
+- !private ["Ps23CustomStringConvertible", "IndexDistance"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "NMBObjCRaiseExceptionMatcher"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- ["Ps23CustomStringConvertible", "_block"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "_name"]
+- ["Ps23CustomStringConvertible", "_reason"]
+- ["Ps23CustomStringConvertible", "_userInfo"]
+- !private ["Ps23CustomStringConvertible", "actualValue"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- ["Ps23CustomStringConvertible", "doesNotMatch"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "map"]
+- ["Ps23CustomStringConvertible", "matches"]
+- !private ["Ps23CustomStringConvertible", "message"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- ["Ps23CustomStringConvertible", "named"]
+- !private ["Ps23CustomStringConvertible", "postfixMessage"]
+- !private ["Ps23CustomStringConvertible", "raiseException"]
+- ["Ps23CustomStringConvertible", "raiseExceptionMatcher"]
+- ["Ps23CustomStringConvertible", "reason"]
+- ["Ps23CustomStringConvertible", "satisfyingBlock"]
+- !private ["Ps23CustomStringConvertible", "tryBlock"]
+- ["Ps23CustomStringConvertible", "userInfo"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Vs10Dictionary", "deinit"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Expression"]
+- !private ["Ps9Equatable", "NMBObjCRaiseExceptionMatcher"]
+- ["Ps9Equatable", "_block"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_name"]
+- ["Ps9Equatable", "_reason"]
+- ["Ps9Equatable", "_userInfo"]
+- !private ["Ps9Equatable", "actualValue"]
+- ["Ps9Equatable", "doesNotMatch"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "matches"]
+- !private ["Ps9Equatable", "name"]
+- ["Ps9Equatable", "named"]
+- !private ["Ps9Equatable", "postfixMessage"]
+- !private ["Ps9Equatable", "raiseException"]
+- ["Ps9Equatable", "raiseExceptionMatcher"]
+- !private ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "reason"]
+- ["Ps9Equatable", "satisfyingBlock"]
+- !private ["Ps9Equatable", "tryBlock"]
+- ["Ps9Equatable", "userInfo"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "map"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["V6Nimble10Expression", "deinit"]
+- !private ["V6Nimble10Expression", "evaluate"]
+- !private ["V6Nimble10Expression", "init"]
+- !private ["C6Nimble14FailureMessage", "actualValue"]
+- ["C6Nimble14FailureMessage", "deinit"]
+- !private ["C6Nimble14FailureMessage", "postfixMessage"]
+- !private ["Sf", "deinit"]
+- !private ["Ps8Hashable", "Expression"]
+- !private ["Ps8Hashable", "NMBObjCRaiseExceptionMatcher"]
+- ["Ps8Hashable", "_block"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_name"]
+- ["Ps8Hashable", "_reason"]
+- ["Ps8Hashable", "_userInfo"]
+- !private ["Ps8Hashable", "actualValue"]
+- ["Ps8Hashable", "doesNotMatch"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "matches"]
+- !private ["Ps8Hashable", "name"]
+- ["Ps8Hashable", "named"]
+- !private ["Ps8Hashable", "postfixMessage"]
+- !private ["Ps8Hashable", "raiseException"]
+- ["Ps8Hashable", "raiseExceptionMatcher"]
+- !private ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "reason"]
+- ["Ps8Hashable", "satisfyingBlock"]
+- !private ["Ps8Hashable", "tryBlock"]
+- ["Ps8Hashable", "userInfo"]
+- ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Ps9Indexable", "IndexDistance"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "map"]
+- !private ["Ps13IndexableBase", "IndexDistance"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "map"]
+- !private ["Vs16IndexingIterator", "Element"]
+- ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["P6Nimble7Matcher", "init"]
+- !private ["P6Nimble7Matcher", "matches"]
+- ["V6Nimble11MatcherFunc", "deinit"]
+- !private ["V6Nimble11MatcherFunc", "init"]
+- !private ["V6Nimble11MatcherFunc", "matches"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "IndexDistance"]
+- !private ["Ps17MutableCollection", "Iterator"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "map"]
+- !private ["Ps16MutableIndexable", "IndexDistance"]
+- !private ["Ps16MutableIndexable", "Iterator"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "map"]
+- !private ["P6Nimble13NMBComparable", "init"]
+- !private ["CSo19NMBExceptionCapture", "deinit"]
+- !private ["CSo19NMBExceptionCapture", "init"]
+- !private ["CSo19NMBExceptionCapture", "tryBlock"]
+- !private ["P6Nimble10NMBMatcher", "Expression"]
+- !private ["P6Nimble10NMBMatcher", "NMBObjCRaiseExceptionMatcher"]
+- !private ["P6Nimble10NMBMatcher", "_block"]
+- !private ["P6Nimble10NMBMatcher", "_name"]
+- !private ["P6Nimble10NMBMatcher", "_reason"]
+- !private ["P6Nimble10NMBMatcher", "_userInfo"]
+- ["P6Nimble10NMBMatcher", "doesNotMatch"]
+- !private ["P6Nimble10NMBMatcher", "init"]
+- ["P6Nimble10NMBMatcher", "matches"]
+- !private ["P6Nimble10NMBMatcher", "raiseException"]
+- ["P6Nimble10NMBMatcher", ""]
+- ["C6Nimble14NMBObjCMatcher", "NMBObjCRaiseExceptionMatcher"]
+- ["C6Nimble14NMBObjCMatcher", "raiseExceptionMatcher"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "Bool"]
+- !private ["C6Nimble28NMBObjCRaiseExceptionMatcher", "Expression"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "FailureMessage"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "NMBObjCRaiseExceptionMatcher"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "NSDictionary"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "NSException"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "NSObject"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "SourceLocation"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "String"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "Void"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "_block"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "_name"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "_reason"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "_userInfo"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "deinit"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "doesNotMatch"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "init"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "matches"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "named"]
+- !private ["C6Nimble28NMBObjCRaiseExceptionMatcher", "raiseException"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "reason"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "satisfyingBlock"]
+- ["C6Nimble28NMBObjCRaiseExceptionMatcher", "userInfo"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "name"]
+- !private ["PSo8NSCoding", "reason"]
+- !private ["PSo8NSCoding", "userInfo"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "name"]
+- !private ["PSo9NSCopying", "reason"]
+- !private ["PSo9NSCopying", "userInfo"]
+- ["CSo12NSDictionary", "deinit"]
+- ["CSo11NSException", "deinit"]
+- !private ["CSo11NSException", "name"]
+- !private ["CSo11NSException", "reason"]
+- !private ["CSo11NSException", "userInfo"]
+- ["VSC15NSExceptionName", "deinit"]
+- !private ["VSC15NSExceptionName", "rawValue"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "Expression"]
+- ["CSo8NSObject", "FailureMessage"]
+- ["CSo8NSObject", "NMBObjCRaiseExceptionMatcher"]
+- ["CSo8NSObject", "NSDictionary"]
+- ["CSo8NSObject", "NSException"]
+- ["CSo8NSObject", "NSObject"]
+- ["CSo8NSObject", "SourceLocation"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "_block"]
+- ["CSo8NSObject", "_name"]
+- ["CSo8NSObject", "_reason"]
+- ["CSo8NSObject", "_userInfo"]
+- !private ["CSo8NSObject", "actualValue"]
+- ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "doesNotMatch"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "matches"]
+- !private ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "named"]
+- !private ["CSo8NSObject", "postfixMessage"]
+- !private ["CSo8NSObject", "raiseException"]
+- ["CSo8NSObject", "raiseExceptionMatcher"]
+- ["CSo8NSObject", "reason"]
+- ["CSo8NSObject", "satisfyingBlock"]
+- !private ["CSo8NSObject", "tryBlock"]
+- ["CSo8NSObject", "userInfo"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "Expression"]
+- !private ["PSo16NSObjectProtocol", "NMBObjCRaiseExceptionMatcher"]
+- ["PSo16NSObjectProtocol", "_block"]
+- ["PSo16NSObjectProtocol", "_name"]
+- ["PSo16NSObjectProtocol", "_reason"]
+- ["PSo16NSObjectProtocol", "_userInfo"]
+- !private ["PSo16NSObjectProtocol", "actualValue"]
+- ["PSo16NSObjectProtocol", "doesNotMatch"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "matches"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- ["PSo16NSObjectProtocol", "named"]
+- !private ["PSo16NSObjectProtocol", "postfixMessage"]
+- !private ["PSo16NSObjectProtocol", "raiseException"]
+- ["PSo16NSObjectProtocol", "raiseExceptionMatcher"]
+- ["PSo16NSObjectProtocol", "reason"]
+- ["PSo16NSObjectProtocol", "satisfyingBlock"]
+- !private ["PSo16NSObjectProtocol", "tryBlock"]
+- ["PSo16NSObjectProtocol", "userInfo"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- ["Sq", "some"]
+- !private ["Ps22RandomAccessCollection", "IndexDistance"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "map"]
+- !private ["Ps21RandomAccessIndexable", "IndexDistance"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "count"]
+- !private ["Ps21RandomAccessIndexable", "map"]
+- !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
+- !private ["Ps26RangeReplaceableCollection", "Iterator"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "map"]
+- !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
+- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "count"]
+- !private ["Ps25RangeReplaceableIndexable", "map"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "IndexDistance"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "map"]
+- ["C6Nimble14SourceLocation", "deinit"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "IndexDistance"]
+- !private ["P6Nimble27TestOutputStringConvertible", "Iterator"]
+- !private ["P6Nimble27TestOutputStringConvertible", "_Element"]
+- !private ["P6Nimble27TestOutputStringConvertible", "count"]
+- !private ["P6Nimble27TestOutputStringConvertible", "init"]
+- !private ["P6Nimble27TestOutputStringConvertible", "map"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps14_ArrayProtocol", "IndexDistance"]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
+- !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "map"]
+- !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "map"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Expression"]
+- !private ["Ps9_Hashable", "NMBObjCRaiseExceptionMatcher"]
+- ["Ps9_Hashable", "_block"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_name"]
+- ["Ps9_Hashable", "_reason"]
+- ["Ps9_Hashable", "_userInfo"]
+- !private ["Ps9_Hashable", "actualValue"]
+- ["Ps9_Hashable", "doesNotMatch"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "matches"]
+- !private ["Ps9_Hashable", "name"]
+- ["Ps9_Hashable", "named"]
+- !private ["Ps9_Hashable", "postfixMessage"]
+- !private ["Ps9_Hashable", "raiseException"]
+- ["Ps9_Hashable", "raiseExceptionMatcher"]
+- !private ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "reason"]
+- ["Ps9_Hashable", "satisfyingBlock"]
+- !private ["Ps9_Hashable", "tryBlock"]
+- ["Ps9_Hashable", "userInfo"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "map"]
+- !private ["Ps21_ObjectiveCBridgeable", "rawValue"]
+- ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps20_SwiftNewtypeWrapper", "rawValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sa"
+- !private "V6Nimble15AssertionRecord"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- "Sb"
+- "Ps7CVarArg"
+- !private "Vs9Character"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps23ExpressibleByNilLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "V6Nimble10Expression"
+- "C6Nimble14FailureMessage"
+- !private "Sf"
+- "Ps8Hashable"
+- !private "SQ"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- !private "P6Nimble7Matcher"
+- "V6Nimble11MatcherFunc"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- !private "P6Nimble13NMBComparable"
+- !private "CSo19NMBExceptionCapture"
+- "P6Nimble10NMBMatcher"
+- "C6Nimble14NMBObjCMatcher"
+- "C6Nimble28NMBObjCRaiseExceptionMatcher"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo12NSDictionary"
+- "CSo11NSException"
+- "VSC15NSExceptionName"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Os5Never"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
+- !private "Ps8Sequence"
+- "C6Nimble14SourceLocation"
+- "Vs12StaticString"
+- "SS"
+- !private "P6Nimble27TestOutputStringConvertible"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Vs26_OptionalNilComparisonType"
+- !private "Ps20_SwiftNewtypeWrapper"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/spencer/Documents/Angular-Regex/RegexiOS/build/Pods.build/Debug-iphoneos/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestExpectation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+interface-hash: "a1df12c619a2afd5d93812ca2b6a83c1"
