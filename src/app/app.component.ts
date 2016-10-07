@@ -12,9 +12,8 @@ export class AppComponent {
   ngOnInit () {}
 
 regEx(input, barcode, index){
-  let regEx = new RegExp(input);
+  let regEx = new RegExp(input);
   let match = regEx.exec(barcode);
-  console.log(match[index]);
 
    if (match) {
     return match[index]
@@ -22,7 +21,6 @@ regEx(input, barcode, index){
      return null
    }
 }
-
 
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string
