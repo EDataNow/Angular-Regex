@@ -11,16 +11,16 @@ export class AppComponent {
 
   ngOnInit () {}
 
-regEx(input, barcode, index){
-  let regEx = new RegExp(input);
-  let match = regEx.exec(barcode);
+  regEx(input, barcode, index){
+    let regEx = new RegExp(input);
+    let match = regEx.exec(barcode);
 
-   if (match) {
-    return match[index]
-   } else {
-     return null
-   }
-}
+     if (match) {
+      return match[index]
+     } else {
+       return null
+     }
+  }
 
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string
@@ -113,84 +113,64 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
  	 let index = 1;
    return this.regEx(input, barcode, index);
 }
-  //----------------------------------------------------------------------------------------------------------------
-
-  //----------------------------------------------------------------------------------------------------------------
-
-	// Combined Methods
+ 
+ 
+// Combined Methods
   
-  // Case # 1 and case # 2 combined method
-  // Must provide a BOOLEAN value set (match_from_index_0) to check if it is matching FROM Index_0
-//   matchStringAndReturnWholeString(barcode, input_string, match_from_index_0) {
-//     let input = match_from_index_0 ? `^${input_string}` : `${input_string}`
-//     let regEx = new RegExp(input)
-//     let barcodeMatch = regEx.test(barcode);
+// Case # 1 and case # 2 combined method
+// Must provide a BOOLEAN value set (match_from_index_0) to check if it is matching FROM Index_0
 
-//       if (barcodeMatch) {
-//         return barcode
-//       } else {
-//         return "No Match"
-//       }
-//   }
+    matchStringAndReturnWholeString(barcode, input_string, match_from_index_0) {
+      let input = match_from_index_0 ? '^' + `${input_string}` + '(.+)' : `${input_string}` + '(.+)';
+      let index = 0;
 
-//   // Case # 3 and case # 4 combined method
-//   // Must provide a boolean value set (include_match) to check if it is INCLUDING MATCH or NOT
+      return this.regEx(input, barcode, index);
+    }
 
-//   matchAnyPositionReturnStringProceedingMatchIncludingOrNotIncludingMatch(barcode, input_string, include_match) {
-//     let input = `${input_string}`
-//     let regEx = new RegExp(input)
-//     let barcodeMatch = regEx.exec(barcode);
+// Case # 3 and case # 4 combined method
+// Must provide a boolean value set (include_match) to check if it is INCLUDING MATCH or NOT
 
-//     if (barcodeMatch) {
-//     let output = include_match ? barcode.slice(barcodeMatch.index) : barcode.slice(barcodeMatch.index + input.length);
-//       return output
-//     } else {
-//       return "No Match"
-//     }
-//   }
+  matchAnyPositionReturnStringProceedingMatchIncludingOrNotIncludingMatch(barcode, input_string, include_match) {
+    let input = include_match ? `${input_string}` + '(.*)' : `${input_string}` + '(.*)'; //input(.*)
+    let index = include_match ? 0 : 1;
 
-//   // Case #5 and case #6 combined method
-//   // Must provide a numeric value set for (length) a specific length they want after the match and a boolean value (include_match) set
-//   // if they want to include or exclude the match in return.
+    return this.regEx(input, barcode, index);
+  }
 
-//   anyPositionsMatchReturnStringProceedingbyLengthInculdeOrNotIncludeMatch (barcode, input_string, include_match, length) {
-//     let input = `${input_string}`;
-//     let input_length = length
-//     let regEx = new RegExp(input)
-//     let barcodeMatch = regEx.exec(barcode);
-//     
-//     if (barcodeMatch) {
-//       let match_included = barcode.slice(barcodeMatch.index, barcodeMatch.index + input_length + input.length)
-//       let match_excluded = barcode.slice(barcodeMatch.index + input.length, barcodeMatch.index + input.length + length);
-//       let output = include_match ?  match_included :  match_excluded
-//     
-//       return output
-//     } else {
-//       return "No Match"
-//     }
-//   }
 
-//   // Case #7 and case #8 combined method
-//   // Must provide a (start_postion) and to include or not include_match
+// Case #5 and case #6 combined method
+// Must provide a numeric value set for (length) a specific length they want after the match and a boolean value (include_match) set
+// if they want to include or exclude the match in return.
 
-//   matchGivenIndexIncludeOrExcludeMatch(barcode, start_position, include_match) {
-//     let match_included = start_position - 1;
-//     let match_excluded = start_position
-//     let start_index = include_match? match_included : match_excluded
-//     let result = barcode.slice(start_index)
-//     
-//     return result;
-//   }
+  anyPositionsMatchReturnStringProceedingbyLengthInculdeOrNotIncludeMatch (barcode, input_string, include_match, length) {
+    // including match RegEx (input.{length})
+    // excluding match RegEx input(.{length}) 
+    let input = include_match? '(' + `${input_string}` + '.' + '{' + `${length}` +'})' : `${input_string}`+ '(.' + '{' + `${length}` +'})'; 
+    let index = include_match? 0 : 1
 
-//   // Case #9 and case #10 combined method
-//   // Must provide a starting (start) position, return (length) length after the match and a boolean (include_match)
-//   // to include or exclude match
+    return this.regEx(input, barcode, index); 
+  }
 
-//     matchGivenIndexAndSpecificLengthIncludeOrExcludeMatch(barcode, start, length, include_match) {
-//       let start_index = include_match ? start - 1 : start
-//       let input_length = include_match ? length + 1 : length
-//       let result = barcode.slice(start_index, start_index + input_length);
-//       return result;
-//     }
-//   }
+// Case #7 and case #8 combined method
+// Must provide a (start_postion) and to include or not include_match
+
+  matchGivenIndexIncludeOrExcludeMatch(barcode, start_position, include_match) {
+    // including match RegEx ^.{start - 1}(.+)
+    // excluding match RegEx ^.{start}(.+)
+    let input = include_match ? `^.{${start_position - 1}}(.+)` : `^.{${start_position}}(.+)`
+    let index = 1
+
+    return this.regEx(input, barcode, index);
+  }
+
+//  Case #9 and case #10 combined method
+//  Must provide a starting (start) position, return (length) length after the match and a boolean (include_match)
+//  to include or exclude match
+
+    matchGivenIndexAndSpecificLengthIncludeOrExcludeMatch(barcode, start, length, include_match) {
+      let input = include_match ? '^.{' + `${start - 1}` +'}' + '(.{' + `${length + 1}` +'}).*' : '^.{' + `${start}` +'}' + '(.{' + `${length}` +'}).*'
+      let index = 1
+
+      return this.regEx(input, barcode, index);
+    }
 }

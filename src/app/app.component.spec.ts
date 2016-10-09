@@ -9,16 +9,19 @@ describe('App: AngularRegex', () => {
     app = new AppComponent();
   })
 
-  it('should match whole string character', () => {
-//     let barcode = 'P12345-A500-H1';
-    expect(app.matchOnAnyPosition(barcode, '1')).toEqual('12345-A500-H1');
-    expect(app.matchOnAnyPosition(barcode, 'X')).toBe(null);
-  });
-
-  it('should match on first character', () => {
-
-    expect(app.matchOnFirstCharacter(barcode, 'P')).toEqual('P12345-A500-H1');
-  });
+  describe('matching string on first character or from the whole string', ()=> {
+    it('#matchOnAnyPosition should match whole string character', ()=> {
+      expect(app.matchOnAnyPosition(barcode, '1')).toEqual('12345-A500-H1');
+    });
+    
+    it('#matchOnFirstCharacter should match on first character', ()=> {
+      expect(app.matchOnFirstCharacter(barcode, 'P')).toEqual('P12345-A500-H1');
+    });
+    it('Should return null when no match is found for #matchOnAnyPosition and #matchOnFirstCharacter, ', ()=> {
+      expect(app.matchOnAnyPosition(barcode, 'X')).toBe(null);
+      expect(app.matchOnFirstCharacter(barcode, '1')).toBe(null);
+    });
+  })
 
   it('should match on first character, return string proceeding match; including match', () => {
 
@@ -45,34 +48,26 @@ describe('App: AngularRegex', () => {
     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, 'X5', 2)).toBe(null);
   });
 
- it('should match after given index, including match', () => {
-
-    expect(app.matchGivenIndexIncludeMatch(barcode, 3)).toEqual('2345-A500-H1');
-    expect(app.matchGivenIndexIncludeMatch(barcode, 5)).toEqual('45-A500-H1');
-    expect(app.matchGivenIndexIncludeMatch(barcode, 9)).toEqual('500-H1');
-    expect(app.matchGivenIndexIncludeMatch(barcode, 1)).toEqual('P12345-A500-H1');
-    expect(app.matchGivenIndexIncludeMatch(barcode, 99)).toEqual(null);
-  });
-
-it('should match after given index, not including match', () => {
-
-    expect(app.matchGivenIndexNotIncludeMatch(barcode, 2)).toEqual('2345-A500-H1');
-    expect(app.matchGivenIndexNotIncludeMatch(barcode, 4)).toEqual('45-A500-H1');
-    expect(app.matchGivenIndexIncludeMatch(barcode, 99)).toEqual(null);
-  });
-
- it('should match after given index and specific length, including match', () => {
-
-    expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 8, 3)).toEqual('A500');
-    expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 8, 5)).toEqual('A500-H');
-    expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 1, 5)).toEqual('P12345');
-    expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 100, 3)).toBe(null);
-  });
-
- it('should match after given index and specific length, not including match', () => {
-
-    expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, 8, 3)).toEqual('500');
-    expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, 1000, 3)).toBe(null);
-  });
+  describe('Matching string on given index', ()=> {
+    it('#matchGivenIndexIncludeMatch should match after given index, including match', ()=> {
+      expect(app.matchGivenIndexIncludeMatch(barcode, 3)).toEqual('2345-A500-H1');
+    });
+    it('#matchGivenIndexNotIncludeMatch should match after given index, not including match', ()=> {
+      expect(app.matchGivenIndexNotIncludeMatch(barcode, 2)).toEqual('2345-A500-H1');
+     
+    });
+    it('#matchGivenIndexAndSpecificLengthIncludeMatch should match after given index and specific length, including match', ()=> {
+      expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 8, 3)).toEqual('A500');
+    });
+    it('#matchGivenIndexAndSpecificLengthNotIncludeMatch should match after given index and specific length, not including match', ()=> {
+      expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, 8, 3)).toEqual('500');
+    });
+    it('should return null when no match is found in any of the examples in the group', ()=> {
+      expect(app.matchGivenIndexIncludeMatch(barcode, 99)).toEqual(null);
+      expect(app.matchGivenIndexIncludeMatch(barcode, 99)).toEqual(null);
+      expect(app.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, 100, 3)).toBe(null);
+      expect(app.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, 1000, 3)).toBe(null);
+    });
+  });
 });
 
