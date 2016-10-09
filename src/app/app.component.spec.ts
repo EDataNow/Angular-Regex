@@ -1,13 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App: AngularRegex', () => {
+describe('AppComponent: AngularRegex', () => {
   var app: AppComponent
   const barcode = 'P12345-A500-H1';
 
   beforeEach(() => {
     app = new AppComponent();
   })
+
 
   describe('matching string on first character or from the whole string', ()=> {
     it('#matchOnAnyPosition should match whole string character', ()=> {
@@ -23,30 +24,36 @@ describe('App: AngularRegex', () => {
     });
   })
 
-  it('should match on first character, return string proceeding match; including match', () => {
+//   it('should match whole string character', () => {
+// //     let barcode = 'P12345-A500-H1';
+//     expect(app.matchOnAnyPosition(barcode, '1')).toEqual('12345-A500-H1');
+//     expect(app.matchOnAnyPosition(barcode, 'X')).toBe(null);
+//   });
 
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, 'A5')).toEqual('A500-H1');
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, '1')).toEqual('12345-A500-H1');
-  });
+//   it('should match on first character', () => {
+//     expect(app.matchOnFirstCharacter(barcode, 'P')).toEqual('P12345-A500-H1');
+//   });
 
-  it('should match on first character, return string proceeding match; not including match', () => {
+//   it('should match on first character, return string proceeding match; including match', () => {
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, 'A5')).toEqual('A500-H1');
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, '1')).toEqual('12345-A500-H1');
+//   });
 
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, 'A5')).toEqual('00-H1');
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, 'H')).toEqual('1');
-  });
+//   it('should match on first character, return string proceeding match; not including match', () => {
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, 'A5')).toEqual('00-H1');
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, 'H')).toEqual('1');
+//   });
 
-   it('should match any position from given string and specific, including match', () => {
+//    it('should match any position from given string and specific, including match', () => {
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength(barcode, 'A5', 2)).toEqual('A500');
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength(barcode, '1', 3)).toEqual('1234');
+//   });
 
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength(barcode, 'A5', 2)).toEqual('A500');
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength(barcode, '1', 3)).toEqual('1234');
-  });
-
-  it('should match on first character, return string proceeding match; not including match', () => {
-
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, '0', 3)).toEqual('0-H');
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, '1', 6)).toEqual('2345-A');
-    expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, 'X5', 2)).toBe(null);
-  });
+//   it('should match on first character, return string proceeding match; not including match', () => {
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, '0', 3)).toEqual('0-H');
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, '1', 6)).toEqual('2345-A');
+//     expect(app.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, 'X5', 2)).toBe(null);
+//   });
 
   describe('Matching string on given index', ()=> {
     it('#matchGivenIndexIncludeMatch should match after given index, including match', ()=> {
