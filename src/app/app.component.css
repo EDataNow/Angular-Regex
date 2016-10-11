@@ -2,8 +2,12 @@ select, option {
 	width: 500px;
 }
 
+input {
+    text-align: center;
+}
 
 .match_on_label_dd {
+
     padding-top: 30px;
     padding-left: 25px;
 }
@@ -22,6 +26,16 @@ select, option {
     padding-right: 21px;
 }
 
+
+.specific_length_field, .start_index_field{
+    width: 200px;
+}
+
+.inc{
+    float: right;
+    padding-right: 500px;
+}
+
 .active {
     padding-right: 30px;
 }
@@ -32,5 +46,8 @@ select, option {
 .try_button {
     padding-top: 20px;
     padding-left: 180px;
+}
 
+.output{
+    padding-left: 184px;
 }

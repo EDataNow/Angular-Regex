@@ -1,34 +1,58 @@
 <div class="match_on_label_dd">
 	<label for="match on dropdown">Match On: </label>
-	<select id="match on dropdown" class="browser-default">
-	    <option>Starting Character</option>
-	    <option>First Occurrance of Character</option>
-	    <option>Always Match on Position</option>
+	<select #InputMatchCriteria id="match on dropdown" class="browser-default">
+	    <option value="1" selected="selected">Starting Character</option>
+	    <option value="2">First Occurrance of Character</option>
+	    <option value="3">Always Match on Position</option>
 	</select>
+
+	 <div class="input-field col s4">
+      <label class="active" for="input_string">Input String:</label>
+      <input #InputString value="" id="input_string"type="text" class="validate">
+    </div>
+
+    <div class="input-field col s4">
+      <label class="active" for="start_index">Starting Index:</label>
+      <input #StartIndex id="start_index" type="number" min="1" class="start_index_field">
+    </div>
 </div>
 
 <div class="return_label_dd">
 	<label class="return_label" for="return dropdown">Return:</label>
-	<select id="return dropdown" class="browser-default">
-	    <option>All</option>
-	    <option>Specific Length</option>
-	    <option>Progress from match</option>
+	<select #InputReturnCriteria id="return dropdown" class="browser-default">
+	    <option value="1" selected="selected">All</option>
+	    <option value="2">Specific Length</option>
+	    <option value="3">Progress from match</option>
 	</select>
-</div>
 
+	<p>
+		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
+	  <label for="includeMatch">Include Match</label>
+  </p>
+
+	<div class="specific_length input-field col s4">
+      <label class="active" for="specific_length">Specific Length:</label>
+      <input #SpecificLength id="specific_length" value="" type="number" min="1" class="specific_length_field">
+  </div>
+</div>
 
 <div class="row">
     <div class="input-field col s4">
-      <label class="active" for="test_it">Input Barcode</label>
-      <input id="test_it" type="text" class="validate">
+      <label class="active" for="input_barcode">Input Barcode:</label>
+      <input #InputBarcode value="" id="input_barcode" type="text" class="validate">
     </div>
 </div>
 
 <div class="try_button">
-	<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Try Filter</a>
+	<button class="waves-effect waves-light btn" (click)="regExFunctionFilter( InputBarcode.value, InputString.value, InputMatchCriteria.value, InputReturnCriteria.value, IncludeMatch.value, SpecificLength.value, StartIndex.value)"><i class="material-icons left">cake</i>Try Filter</button>
 </div>
 
 <div class="row">
-<div class="col s4">
-	<textarea id="output" class="textarea"></textarea>
+	<div class="col s4">
+		<div class="output">
+			<h4>Output:</h4>
+			<p id="output">
+			</p>
+		</div>
+	</div>
 </div>
