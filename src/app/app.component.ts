@@ -7,27 +7,61 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'app works!';
+includeMatch:boolean = true;
+match_on_dropdown: number;
+return_dropdown: number;
+specificLength:number = 0;
 
   ngOnInit () {}
 
-  regEx(input, barcode, index){
-    let regEx = new RegExp(input);
-    let match = regEx.exec(barcode);
+  
 
-     if (match) {
-      return match[index]
-     } else {
-       return null
-     }
-  }
+    regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength) {
+        const output = document.getElementById("output")
+       // Case 1
+        if (this.caseOne(match_on_dropdown, return_dropdown, includeMatch)) {
+            output.innerText = this.matchOnAnyPosition(barcode, input_string);
+        }
+        //Case 2
+        if (this.caseTwo(match_on_dropdown, return_dropdown, includeMatch)) {
+            output.innerText = this.matchOnFirstCharacter(barcode, input_string);
+        }
 
+        //Case 3 & 4
+        if (this.caseThreeandFour(match_on_dropdown, return_dropdown, includeMatch)) {
+            if (includeMatch === "true"){
+                output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, input_string);
+            } else {
+               output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatch(barcode, input_string);
+            }
+        }
+
+        //Case 5 & 6
+    }
+
+    private caseOne(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "2" && return_dropdown === "1" && includeMatch === "true" ) {
+            return true
+        }
+    }
+
+    private caseTwo(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "1" && return_dropdown === "1" && includeMatch === "true" ) {
+            return true
+        }
+    }
+    
+    private caseThreeandFour(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "2" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") ) {
+            return true
+        }
+    }
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string
 
 
  matchOnAnyPosition(barcode, input_string){
-  let input = `${input_string}` + '(.+)';
+  let input = '(^.*' + `${input_string}` + '.*$)';
   let index = 0;
   return this.regEx(input, barcode, index);
 }
@@ -173,4 +207,15 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
 
       return this.regEx(input, barcode, index);
     }
+
+private regEx(input, barcode, index){
+    let regEx = new RegExp(input);
+    let match = regEx.exec(barcode);
+
+     if (match) {
+      return match[index]
+     } else {
+       return null
+     }
+  }
 }

@@ -1,7 +1,10 @@
 select, option {
 	width: 500px;
 }
-
+ 
+.specfic_length{
+    width: 100px;
+}
 
 .match_on_label_dd {
     padding-top: 30px;
