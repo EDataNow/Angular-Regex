@@ -11,12 +11,11 @@ includeMatch:boolean = true;
 match_on_dropdown: number;
 return_dropdown: number;
 specificLength:number = 0;
+startIndex:number = 0;
 
-  ngOnInit () {}
+  ngOnInit () { }
 
-  
-
-    regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength) {
+      regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength, startIndex) {
         const output = document.getElementById("output")
        // Case 1
         if (this.caseOne(match_on_dropdown, return_dropdown, includeMatch)) {
@@ -28,7 +27,7 @@ specificLength:number = 0;
         }
 
         //Case 3 & 4
-        if (this.caseThreeandFour(match_on_dropdown, return_dropdown, includeMatch)) {
+        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch)) {
             if (includeMatch === "true"){
                 output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchIncludingMatch(barcode, input_string);
             } else {
@@ -37,6 +36,31 @@ specificLength:number = 0;
         }
 
         //Case 5 & 6
+        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, specificLength)) {
+            if (includeMatch === "true"){
+                output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchIncludingMatchOfSpecificLength (barcode, input_string, specificLength);
+            } else {
+               output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(barcode, input_string, specificLength);
+            }
+        }
+         
+         //Case 7 & 8
+        if (this.caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, startIndex)) {
+            if (includeMatch === "true"){
+                output.innerText = this.matchGivenIndexIncludeMatch(barcode, startIndex);
+            } else {
+                output.innerText = this.matchGivenIndexNotIncludeMatch(barcode, startIndex);
+            }
+        }
+           
+        //Case 9 & 10
+        if (this.caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength)) {
+            if (includeMatch === "true"){
+                output.innerText = this.matchGivenIndexAndSpecificLengthIncludeMatch(barcode, parseInt(startIndex), parseInt(specificLength));
+            } else {
+                output.innerText = this.matchGivenIndexAndSpecificLengthNotIncludeMatch(barcode, startIndex, specificLength)
+            }
+        }
     }
 
     private caseOne(match_on_dropdown, return_dropdown, includeMatch) {
@@ -51,14 +75,34 @@ specificLength:number = 0;
         }
     }
     
-    private caseThreeandFour(match_on_dropdown, return_dropdown, includeMatch) {
+    private caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch) {
         if (match_on_dropdown === "2" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") ) {
             return true
         }
     }
+
+    private caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, specificLength ) {
+        if (match_on_dropdown === "2" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && specificLength > 0 ) {
+            return true
+        }
+    }
+
+    private caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, startIndex) {
+        if (match_on_dropdown === "3" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0 ) {
+            return true
+        }
+    }
+
+    private caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength) {
+        if (match_on_dropdown === "3" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0  && specificLength > 0 ) {
+            return true
+        }
+    }
+    
+    
+
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string
-
 
  matchOnAnyPosition(barcode, input_string){
   let input = '(^.*' + `${input_string}` + '.*$)';
