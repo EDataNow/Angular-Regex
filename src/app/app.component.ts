@@ -208,10 +208,10 @@ matchOnAnyPositionReturnStringProceedingMatchNotIncludingMatchOfSpecificLength(b
 //  to include or exclude match
 
     matchGivenIndexAndSpecificLengthIncludeOrExcludeMatch(barcode, start, length, include_match) {
-      let input = include_match ? '^.{' + `${start - 1}` +'}' + '(.{' + `${length + 1}` +'}).*' : '^.{' + `${start}` +'}' + '(.{' + `${length}` +'}).*'
-      let index = 1
+        let input = include_match ? '^.{' + `${start - 1}` +'}' + '(.{' + `${length + 1}` +'}).*' : '^.{' + `${start}` +'}' + '(.{' + `${length}` +'}).*'
+        let index = 1
 
-      return this.regEx(input, barcode, index);
+        return this.regEx(input, barcode, index);
     }
 
 private regEx(input, barcode, index){
