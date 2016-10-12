@@ -16,18 +16,48 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
+
+    //Match Dropdown
     $('#match_on_dropdown').on('change', function() {
-      if ( this.value == '1' || this.value == '2')
+      if ( this.value == '1')
       {
         $("#input_string").show();
+        $("#return_label_dd").hide();
       }
-      else
+      if ( this.value == '2')
+      {
+        $("#input_string").show();
+        $("#return_label_dd").show();
+         $("#start_index").hide();
+      }
+      if ( this.value == '3')
       {
         $("#input_string").hide();
+        $("#return_label_dd").show();
+        $("#start_index").show();
       }
+
+
     });
 
-});
+    //Return Dropdown
+    $('#return_dropdown').on('change', function() {
+      if ( this.value == '2')
+      {
+        $("#include_match").show();
+        $("#specific_length").show();
+        $("#start_index").hide();
+      }
+      if ( this.value == '3')
+      {
+        $("#include_match").show();
+        $("#specific_length").hide();
+        // $("#specific_length").show();
+
+      }
+    });
+  });
 </script>
+
 </body>
 </html>

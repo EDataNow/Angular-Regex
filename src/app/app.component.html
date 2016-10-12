@@ -17,38 +17,43 @@
   </div>
 </div>
 
-<div style='display:none;' id="include_match">
+
+<div style='display: none;' class="return_label_dd" id="return_label_dd">
+	<label class="return_label" id="return_label" for="return dropdown">Return:</label>
+	<select #InputReturnCriteria id="return_dropdown" class="browser-default">
+	    <option value="1" selected="selected">All</option>
+	    <option value="2">Specific Length</option>
+	    <option value="3">Progress from match</option>
+	</select>
+</div>
+
+<div style='display: none;' class="include_match" id="include_match">
 		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
 	  <label for="includeMatch">Include Match</label>
 </div>
 
-
-<div style='display:none;' id="business">
-  <div class="input-field col s4">
-    <label class="active" for="start_index">Starting Index:</label>
-    <input #StartIndex id="start_index" type="number" min="1" class="start_index_field">
-  </div>
-
-	<div class="return_label_dd">
-		<label class="return_label" for="return dropdown">Return:</label>
-		<select #InputReturnCriteria id="return dropdown" class="browser-default">
-		    <option value="1" selected="selected">All</option>
-		    <option value="2">Specific Length</option>
-		    <option value="3">Progress from match</option>
-		</select>
-
-		<div class="specific_length input-field col s4">
-	      <label class="active" for="specific_length">Specific Length:</label>
-	      <input #SpecificLength id="specific_length" value="" type="number" min="1" class="specific_length_field">
-	  </div>
+<div style='display: none;'  id="specific_length" class="specific_length">
+	<div class="input-field col s4">
+	  <label class="active" for="specific_length">Specific Length:</label>
+	  <input #SpecificLength id="specific_length" type="number" min="1">
 	</div>
 </div>
 
-<div class="row">
-    <div class="input-field col s4">
-      <label class="active" for="input_barcode">Input Barcode:</label>
-      <input #InputBarcode value="" id="input_barcode" type="text" class="validate">
-    </div>
+
+
+<div style='display:none;' id="start_index" class="start_index">
+  <div class="input-field col s4">
+    <label class="active" for="start_index">Starting Index:</label>
+    <input #StartIndex id="start_index" type="number" min="1">
+  </div>
+</div>
+
+
+<div class="input_barcode" id="input_barcode">
+	<div class="input-field col s4">
+    <label class="active" for="input_barcode">Input Barcode:</label>
+    <input #InputBarcode value="" id="input_barcode" type="text" class="validate">
+  </div>
 </div>
 
 <div class="try_button">
