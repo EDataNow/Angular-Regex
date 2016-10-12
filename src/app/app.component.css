@@ -2,7 +2,7 @@ select, option {
 	width: 500px;
 }
 
-input {
+input, p {
     text-align: center;
 }
 
@@ -10,6 +10,10 @@ input {
 
     padding-top: 30px;
     padding-left: 25px;
+}
+
+.input_string{
+    padding-left: 30px;
 }
 
 .return_label_dd {
@@ -49,5 +53,10 @@ input {
 }
 
 .output{
-    padding-left: 184px;
+    padding-left: 100px;
+}
+
+
+.output_label{
+    padding-left: 181px;
 }

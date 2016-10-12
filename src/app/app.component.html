@@ -1,39 +1,47 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <div class="match_on_label_dd">
-	<label for="match on dropdown">Match On: </label>
-	<select #InputMatchCriteria id="match on dropdown" class="browser-default">
+  <label for="match_on_dropdown">Match On: </label>
+	<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
 	    <option value="1" selected="selected">Starting Character</option>
 	    <option value="2">First Occurrance of Character</option>
 	    <option value="3">Always Match on Position</option>
 	</select>
-
-	 <div class="input-field col s4">
-      <label class="active" for="input_string">Input String:</label>
-      <input #InputString value="" id="input_string"type="text" class="validate">
-    </div>
-
-    <div class="input-field col s4">
-      <label class="active" for="start_index">Starting Index:</label>
-      <input #StartIndex id="start_index" type="number" min="1" class="start_index_field">
-    </div>
 </div>
 
-<div class="return_label_dd">
-	<label class="return_label" for="return dropdown">Return:</label>
-	<select #InputReturnCriteria id="return dropdown" class="browser-default">
-	    <option value="1" selected="selected">All</option>
-	    <option value="2">Specific Length</option>
-	    <option value="3">Progress from match</option>
-	</select>
 
-	<p>
+<div class="input_string" id="input_string">
+	<div class="input-field col s4">
+    <label class="active" for="input_string">Input String:</label>
+    <input #InputString value="" id="input_string"type="text" class="validate">
+  </div>
+</div>
+
+<div style='display:none;' id="include_match">
 		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
 	  <label for="includeMatch">Include Match</label>
-  </p>
+</div>
 
-	<div class="specific_length input-field col s4">
-      <label class="active" for="specific_length">Specific Length:</label>
-      <input #SpecificLength id="specific_length" value="" type="number" min="1" class="specific_length_field">
+
+<div style='display:none;' id="business">
+  <div class="input-field col s4">
+    <label class="active" for="start_index">Starting Index:</label>
+    <input #StartIndex id="start_index" type="number" min="1" class="start_index_field">
   </div>
+
+	<div class="return_label_dd">
+		<label class="return_label" for="return dropdown">Return:</label>
+		<select #InputReturnCriteria id="return dropdown" class="browser-default">
+		    <option value="1" selected="selected">All</option>
+		    <option value="2">Specific Length</option>
+		    <option value="3">Progress from match</option>
+		</select>
+
+		<div class="specific_length input-field col s4">
+	      <label class="active" for="specific_length">Specific Length:</label>
+	      <input #SpecificLength id="specific_length" value="" type="number" min="1" class="specific_length_field">
+	  </div>
+	</div>
 </div>
 
 <div class="row">
@@ -49,10 +57,7 @@
 
 <div class="row">
 	<div class="col s4">
-		<div class="output">
-			<h4>Output:</h4>
-			<p id="output">
-			</p>
-		</div>
+		<h4 class="output_label">Output:</h4>
+		<p class="output" id="output"></p>
 	</div>
 </div>
