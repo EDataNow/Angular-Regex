@@ -63,44 +63,6 @@ startIndex:number = 0;
         }
     }
 
-    private caseOne(match_on_dropdown, return_dropdown, includeMatch) {
-        if (match_on_dropdown === "2" && return_dropdown === "1" && includeMatch === "true" ) {
-            return true
-        }
-    }
-
-    private caseTwo(match_on_dropdown, return_dropdown, includeMatch) {
-        if (match_on_dropdown === "1" && return_dropdown === "1" && includeMatch === "true" ) {
-            return true
-        }
-    }
-
-    private caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch) {
-        if (match_on_dropdown === "2" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") ) {
-            return true
-        }
-    }
-
-    private caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, specificLength ) {
-        if (match_on_dropdown === "2" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && specificLength > 0 ) {
-            return true
-        }
-    }
-
-    private caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, startIndex) {
-        if (match_on_dropdown === "3" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0 ) {
-            return true
-        }
-    }
-
-    private caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength) {
-        if (match_on_dropdown === "3" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0  && specificLength > 0 ) {
-            return true
-        }
-    }
-
-
-
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string
 
@@ -262,4 +224,40 @@ private regEx(input, barcode, index){
        return null
      }
   }
+
+     private caseOne(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "2" && return_dropdown === "1" && includeMatch === "true" ) {
+            return true
+        }
+    }
+
+    private caseTwo(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "1" && return_dropdown === "1" && includeMatch === "true" ) {
+            return true
+        }
+    }
+
+    private caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch) {
+        if (match_on_dropdown === "2" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") ) {
+            return true
+        }
+    }
+
+    private caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, specificLength ) {
+        if (match_on_dropdown === "2" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && specificLength > 0 ) {
+            return true
+        }
+    }
+
+    private caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, startIndex) {
+        if (match_on_dropdown === "3" && return_dropdown === "3" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0 ) {
+            return true
+        }
+    }
+
+    private caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength) {
+        if (match_on_dropdown === "3" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0  && specificLength > 0 ) {
+            return true
+        }
+    }
 }
