@@ -2,45 +2,35 @@ select, option {
 	width: 500px;
 }
 
-input {
+input, p {
     text-align: center;
 }
 
-.match_on_label_dd {
-
+.match_on_label_dd, .return_label_dd {
     padding-top: 30px;
     padding-left: 25px;
 }
 
-.return_label_dd {
+.input_string, .input_barcode{
+    padding-left: 30px;
+    width: 420px;
+}
+
+.include_match{
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.specific_length{
     padding-top: 21px;
-    padding-left: 25px;
-}
-
-.row {
-	padding-top: 21px;
-	padding-left: 25px;
-}
-
-.return_label {
-    padding-right: 21px;
-}
-
-
-.specific_length_field, .start_index_field{
+    padding-left: 30px;
     width: 200px;
 }
 
-.inc{
-    float: right;
-    padding-right: 500px;
-}
-
-.active {
-    padding-right: 30px;
-}
-.validate {
-	width: 493px;
+.start_index{
+    padding-top: 21px;
+    padding-left: 30px;
+    width: 200px;
 }
 
 .try_button {
@@ -48,6 +38,11 @@ input {
     padding-left: 180px;
 }
 
-.output{
-    padding-left: 184px;
+.output_label{
+    padding-left: 181px;
 }
+
+.output{
+    padding-left: 100px;
+}
+
