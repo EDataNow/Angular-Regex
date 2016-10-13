@@ -1,68 +1,69 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<div class="match_on_label_dd">
-  <label for="match_on_dropdown">Match On: </label>
-	<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
-	    <option value="1" selected="selected">Starting Character</option>
-	    <option value="2">First Occurrance of Character</option>
-	    <option value="3">Always Match on Position</option>
-	</select>
-</div>
-
-
-<div class="input_string" id="input_string">
-	<div class="input-field col s4">
-    <label class="active" for="input_string">Input String:</label>
-    <input #InputString value="" id="input_string"type="text" class="validate">
-  </div>
-</div>
-
-
-<div style='display: none;' class="return_label_dd" id="return_label_dd">
-	<label class="return_label" id="return_label" for="return dropdown">Return:</label>
-	<select #InputReturnCriteria id="return_dropdown" class="browser-default">
-	    <option value="1" selected="selected">All</option>
-	    <option value="2">Specific Length</option>
-	    <option value="3">Progress from match</option>
-	</select>
-</div>
-
-<div style='display: none;' class="include_match" id="include_match">
-		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
-	  <label for="includeMatch">Include Match</label>
-</div>
-
-<div style='display: none;'  id="specific_length" class="specific_length">
-	<div class="input-field col s4">
-	  <label class="active" for="specific_length">Specific Length:</label>
-	  <input #SpecificLength id="specific_length" type="number" min="1">
+<div id="Regex">
+	<div class="match_on_label_dd">
+	  <label for="match_on_dropdown">Match On: </label>
+		<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
+		    <option value="1">Starting Character</option>
+		    <option value="2">First Occurrance of Character</option>
+		    <option value="3">Always Match on Position</option>
+		</select>
 	</div>
-</div>
 
 
-
-<div style='display:none;' id="start_index" class="start_index">
-  <div class="input-field col s4">
-    <label class="active" for="start_index">Starting Index:</label>
-    <input #StartIndex id="start_index" type="number" min="1">
-  </div>
-</div>
-
-
-<div class="input_barcode" id="input_barcode">
-	<div class="input-field col s4">
-    <label class="active" for="input_barcode">Input Barcode:</label>
-    <input #InputBarcode value="" id="input_barcode" type="text" class="validate">
-  </div>
-</div>
-
-<div class="try_button">
-	<button class="waves-effect waves-light btn" (click)="regExFunctionFilter( InputBarcode.value, InputString.value, InputMatchCriteria.value, InputReturnCriteria.value, IncludeMatch.value, SpecificLength.value, StartIndex.value)"><i class="material-icons left">cake</i>Try Filter</button>
-</div>
-
-<div class="row">
-	<div class="col s4">
-		<h4 class="output_label">Output:</h4>
-		<p class="output" id="output"></p>
+  <div style='display: none;' class="return_label_dd" id="return_label_dd">
+		<label class="return_label" id="return_label" for="return dropdown">Return:</label>
+		<select #InputReturnCriteria id="return_dropdown" class="browser-default">
+		    <option value="1">All</option>
+		    <option value="2" selected="selected">Specific Length</option>
+		    <option value="3">Progress from match</option>
+		</select>
 	</div>
+
 </div>
+	<div class="input_string" id="input_string">
+		<div class="input-field col s4">
+	    <label class="active" for="input_string">Character(s):</label>
+	    <input #InputString value="" id="input_string"type="text" class="validate">
+	  </div>
+	</div>
+
+
+	<div style='display: none;' class="include_match" id="include_match">
+			<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
+		  <label for="includeMatch">Include Match</label>
+	</div>
+
+	<div style='display: none;'  id="specific_length" class="specific_length">
+		<div class="input-field col s4">
+		  <label class="active" for="specific_length">Specific Length:</label>
+		  <input #SpecificLength id="specific_length" type="number" min="1">
+		</div>
+	</div>
+
+
+	<div style='display:none;' id="start_index" class="start_index">
+	  <div class="input-field col s4">
+	    <label class="active" for="start_index">Starting Index:</label>
+	    <input #StartIndex id="start_index" type="number" min="1">
+	  </div>
+	</div>
+
+
+	<div class="input_barcode" id="input_barcode">
+		<div class="input-field col s4">
+	    <label class="active" for="input_barcode">Input Barcode:</label>
+	    <input #InputBarcode value="" id="input_barcode" type="text" class="validate">
+	  </div>
+	</div>
+
+	<div class="try_button">
+		<button class="waves-effect waves-light btn" (click)="regExFunctionFilter( InputBarcode.value, InputString.value, InputMatchCriteria.value, InputReturnCriteria.value, IncludeMatch.value, SpecificLength.value, StartIndex.value)"><i class="material-icons left">cake</i>Try Filter</button>
+	</div>
+
+	<div class="row">
+		<div class="col s4">
+			<h4 class="output_label">Output:</h4>
+			<p class="output" id="output"></p>
+		</div>
+	</div>

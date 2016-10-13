@@ -16,48 +16,77 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-
     //Match Dropdown
-    $('#match_on_dropdown').on('change', function() {
-      if ( this.value == '1')
+    $("#Regex").on('change', function() {
+      var match_dropdown = $("#match_on_dropdown option:selected");
+      var match_dropdown_value = match_dropdown.val();
+      console.log('match', match_dropdown_value);
+
+      var return_dropdown = $("#return_dropdown option:selected");
+      var return_dropdown_value = return_dropdown.val();
+      console.log('return', return_dropdown_value);
+
+      if ( match_dropdown_value == '1')
       {
         $("#input_string").show();
         $("#return_label_dd").hide();
+        $("#start_index").hide();
+        $("#start_index").hide();
+        $("#include_match").hide();
+        $("#specific_length").hide();
+
       }
-      if ( this.value == '2')
+      if ( match_dropdown_value == '2' && return_dropdown_value == 1)
       {
+        $("#return_label_dd").show();
         $("#input_string").show();
-        $("#return_label_dd").show();
-         $("#start_index").hide();
+        $("#include_match").hide();
+        $("#specific_length").hide();
+        $("#start_index").hide();
       }
-      if ( this.value == '3')
+      if ( match_dropdown_value == '2' && return_dropdown_value == 3)
       {
-        $("#input_string").hide();
         $("#return_label_dd").show();
-        $("#start_index").show();
-      }
-
-
-    });
-
-    //Return Dropdown
-    $('#return_dropdown').on('change', function() {
-      if ( this.value == '2')
-      {
         $("#include_match").show();
+        $("#input_string").show();
+        $("#specific_length").hide();
+        $("#start_index").hide();
+      }
+      if ( match_dropdown_value == '2' && return_dropdown_value == 2)
+      {
+        $("#return_label_dd").show();
+        $("#include_match").show();
+        $("#input_string").show();
         $("#specific_length").show();
         $("#start_index").hide();
       }
-      if ( this.value == '3')
+      if ( match_dropdown_value == '3' && return_dropdown_value == 1 )
       {
-        $("#include_match").show();
+        $("#return_label_dd").show();
+        alert('This combination does not result in any matches, please select another option')
+        $("#start_index").hide();
         $("#specific_length").hide();
-        // $("#specific_length").show();
-
+        $("#input_string").hide();
+        $("#include_match").hide();
+      }
+      if ( match_dropdown_value == '3' && return_dropdown_value == 3 )
+      {
+        $("#return_label_dd").show();
+        $("#start_index").show();
+        $("#include_match").show();
+        $('#specific_length').hide()
+        $("#input_string").hide();
+      }
+      if ( match_dropdown_value == '3' && return_dropdown_value == 2 )
+      {
+        $("#return_label_dd").show();
+        $("#start_index").show();
+        $("#include_match").show();
+        $('#specific_length').show()
+        $("#input_string").hide();
       }
     });
   });
 </script>
-
 </body>
 </html>
