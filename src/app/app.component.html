@@ -4,19 +4,18 @@
 	<div class="match_on_label_dd">
 	  <label for="match_on_dropdown">Match On: </label>
 		<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
-		    <option value="1">Starting Character</option>
-		    <option value="2">First Occurrance of Character</option>
-		    <option value="3">Always Match on Position</option>
+		    <option value="1">Position</option>
+		    <option value="2">First Match of</option>
 		</select>
 	</div>
 
-
-  <div style='display: none;' class="return_label_dd" id="return_label_dd">
+<!-- style='display: none;' -->
+  <div  class="return_label_dd" id="return_label_dd">
 		<label class="return_label" id="return_label" for="return dropdown">Return:</label>
 		<select #InputReturnCriteria id="return_dropdown" class="browser-default">
-		    <option value="1">All</option>
-		    <option value="2" selected="selected">Specific Length</option>
-		    <option value="3">Progress from match</option>
+		    <option value="1">Return Specific Length</option>
+		    <option value="2">Progress from match</option>
+		    <option value="3">Entire Barcode</option>
 		</select>
   </div>
 </div>
@@ -29,12 +28,12 @@
 </div>
 
 
-<div style='display: none;' class="include_match" id="include_match">
+<div  class="include_match" id="include_match">
 		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
 	  <label for="includeMatch">Include Match</label>
 </div>
 
-<div style='display: none;'  id="specific_length" class="specific_length">
+<div id="specific_length" class="specific_length">
 	<div class="input-field col s4">
 	  <label class="active" for="specific_length">Specific Length:</label>
 	  <input #SpecificLength id="specific_length" type="number" min="1">
@@ -42,7 +41,7 @@
 </div>
 
 
-<div style='display:none;' id="start_index" class="start_index">
+<div id="start_index" class="start_index">
   <div class="input-field col s4">
     <label class="active" for="start_index">Starting Index:</label>
     <input #StartIndex id="start_index" type="number" min="1">
