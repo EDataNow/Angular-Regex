@@ -122,7 +122,7 @@ startIndex:number = 0;
     }
 
     private regEx(input, barcode, index){
-        let regEx = new RegExp(input);
+        let regEx = new RegExp(input, 'i');
         let match = regEx.exec(barcode);
 
         if (match) {
