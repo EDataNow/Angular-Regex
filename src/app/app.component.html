@@ -1,6 +1,6 @@
 <div class="match_on_label_dd">
 	<label for="match on dropdown">Match On: </label>
-	<select #InputMatchCriteria id="match on dropdown" class="browser-default">
+	<select #InputMatchCriteria id="match on dropdown" class="browser-default" (change)="setMatchOnDropdownValue($event.target.value)">
 	    <option value="1" selected="selected">Starting Character</option>
 	    <option value="2">First Occurrance of Character</option>
 	    <option value="3">Always Match on Position</option>
@@ -19,7 +19,7 @@
 
 <div class="return_label_dd">
 	<label class="return_label" for="return dropdown">Return:</label>
-	<select #InputReturnCriteria id="return dropdown" class="browser-default">
+	<select #InputReturnCriteria id="return dropdown" class="browser-default" (change)="setReturnDropdownValue($event.target.value)">
 	    <option value="1" selected="selected">All</option>
 	    <option value="2">Specific Length</option>
 	    <option value="3">Progress from match</option>

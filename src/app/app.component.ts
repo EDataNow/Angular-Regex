@@ -13,6 +13,9 @@ return_dropdown: number;
 specificLength:number = 0;
 startIndex:number = 0;
 
+matchOnDropDownValue:number;
+returnOnDropDownValue:number;
+
   ngOnInit () {}
 
       regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength, startIndex) {
@@ -55,6 +58,18 @@ startIndex:number = 0;
             output.innerText = this.matchGivenIndexAndSpecificLengthIncludeOrExcludeMatch(barcode, parseInt(startIndex), parseInt(specificLength), include_match_boolean);
         }
     }
+    
+    setMatchOnDropdownValue(value) {
+        this.matchOnDropDownValue = value
+        console.log("matchOnDropDownValue", this.matchOnDropDownValue);
+    }
+
+     setReturnDropdownValue(value) {
+        this.matchOnDropDownValue = value
+        console.log("ReturnDropDownValue", this.matchOnDropDownValue);
+    }
+
+
 
 // #1
 // Match string on any position, non-case sensitive. Returns the whole string

@@ -7,7 +7,6 @@ input {
 }
 
 .match_on_label_dd {
-
     padding-top: 30px;
     padding-left: 25px;
 }
@@ -50,4 +49,8 @@ input {
 
 .output{
     padding-left: 184px;
+}
+
+.test-class {
+    display: none;
 }
