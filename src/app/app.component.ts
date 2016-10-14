@@ -13,10 +13,10 @@ return_dropdown: number;
 specificLength:number = 0;
 startIndex:number = 0;
 
-matchOnDropDownValue:number;
+matchOnDropDownValue = 1;
 returnOnDropDownValue:number;
 
-  ngOnInit () {}
+  ngOnInit () { console.log(this.matchOnDropDownValue) }
 
       regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength, startIndex) {
         const output = document.getElementById("output")
@@ -60,13 +60,19 @@ returnOnDropDownValue:number;
     }
     
     setMatchOnDropdownValue(value) {
-        this.matchOnDropDownValue = value
-        console.log("matchOnDropDownValue", this.matchOnDropDownValue);
+        this.matchOnDropDownValue = parseInt(value)
+        console.log("matchOnDropDownValue", typeof(this.matchOnDropDownValue), this.matchOnDropDownValue);
     }
 
      setReturnDropdownValue(value) {
         this.matchOnDropDownValue = value
         console.log("ReturnDropDownValue", this.matchOnDropDownValue);
+    }
+
+    uiLogic() {
+        if( this.matchOnDropDownValue === 1 ) {
+            return true
+        }
     }
 
 
