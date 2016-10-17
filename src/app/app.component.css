@@ -6,7 +6,7 @@ input, p {
     text-align: center;
 }
 
-#first_row {
+/*#first_row {
      width: 2000px;
 }
 
@@ -35,7 +35,7 @@ input, p {
     width: 500px;
     position: absolute;
     right: 100px;
-}
+}*/
 .start_index{
     padding-top: 5px;
     padding-left: 30px;
