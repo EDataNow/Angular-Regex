@@ -3,3 +3,4 @@
 import UIKit
 
 var str = "Hello, playground"
+let saim = "Saim is cool"

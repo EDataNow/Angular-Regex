@@ -6,44 +6,32 @@ input, p {
     text-align: center;
 }
 
-/*#first_row {
-     width: 2000px;
-}
-
-#dropdowns{
-    width: 1000px;
-    float: left;
-}
-
-#options{
-    padding-top: 25px;
-    width: 1000px;
-    float: left;
+/*.start_index, .input_string {
+    display:inline-block;
+    margin:10px 0;
+    border-radius:25px;
 }
 
 .match_on_label_dd {
-    padding-top: 30px;
-    padding-left: 30px;
+    display:inline-block;
+    margin:10px 0;
+    border-radius:25px;
 }
 
-.return_label_dd {
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-#options_for_match_dd {
-    width: 500px;
-    position: absolute;
-    right: 100px;
+#container {
+    text-align:center;
+    background-color: #99CC99;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }*/
-.start_index{
-    padding-top: 5px;
+
+.return_label_dd, .match_on_label_dd {
     padding-left: 30px;
-    float: left;
-    width: 200px;
 }
 
-.select_index {
+.select_index, .start_index {
     padding-top: 5px;
     padding-left: 30px;
     width: 200px;
@@ -52,16 +40,12 @@ input, p {
 .input_string {
     padding-top: 5px;
     padding-left: 30px;
-    float: left;
     width: 300px;
 }
 
-#clear {
-    clear: both;
-}
 
 .specific_length{
-    padding-top: 105px;
+    padding-top: 10px;
     padding-left: 30px;
     width: 200px;
 }
