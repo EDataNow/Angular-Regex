@@ -4,7 +4,7 @@
 	<div id="dropdowns" class="col s6">
 		<div class="match_on_label_dd">
 		  <label for="match_on_dropdown">Match On: </label>
-			<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
+			<select #InputMatchCriteria id="match_on_dropdown" class="browser-default" (change)="setMatchOnDropdownValue($event.target.value)">
 			    <option value="1">Position</option>
 			    <option value="2">First Match of</option>
 			</select>
@@ -13,17 +13,17 @@
 	<!-- style='display: none;' -->
 	  <div  class="return_label_dd" id="return_label_dd">
 			<label class="return_label" id="return_label" for="return dropdown">Return:</label>
-			<select #InputReturnCriteria id="return_dropdown" class="browser-default">
-			    <option value="1">Return Specific Length</option>
-			    <option value="2">Progress from match</option>
-			    <option value="3">Entire Barcode</option>
+			<select #InputReturnCriteria id="return_dropdown" class="browser-default" (change)="setReturnDropdownValue($event.target.value)">
+			    <option value="1">From Position</option>
+			    <option value="2">From Match</option>
+			    <option value="3">From Match(Include Match)</option>
 			</select>
 	  </div>
 	</div>
 
   <div id="options" class="col s6">
 		<div id="options_for_match_dd">
-			<div id="start_index" class="start_index">
+			<div id="start_index" class="start_index" [hidden]="matchOnUiLogic()">
 			  <div class="input-field col s4">
 			    <label class="active" for="start_index">Starting Index:</label>
 			    <input #StartIndex id="start_index" type="number" min="1">
@@ -44,19 +44,19 @@
 				</div>
 			</div>
 
+			<div id="select_index" class="select_index" [hidden]=" returnUiLogic()">
+				<div class="input-field col s4">
+				  <label class="active" for="select_index">Select Index:</label>
+				  <input #SelectIndex id="select_index" type="number" min="1">
+				</div>
+			</div>
+
 			<div id="clear"></div>
 		</div>
 	</div>
 	<div id="clear"></div>
 </div>
 
-
-<div>
-	<div  class="include_match" id="include_match">
-		<input type="checkbox" id="includeMatch" value="{{includeMatch}}" [checked]="includeMatch" (change)="includeMatch = $event.target.checked" #IncludeMatch/>
-	  <label for="includeMatch">Include Match</label>
-	</div>
-</div>
 
 <div class="input_barcode" id="input_barcode">
 	<div class="input-field col s4">
@@ -66,7 +66,7 @@
 </div>
 
 <div class="try_button">
-	<button class="waves-effect waves-light btn" (click)="regExFunctionFilter( InputBarcode.value, InputString.value, InputMatchCriteria.value, InputReturnCriteria.value, IncludeMatch.value, SpecificLength.value, StartIndex.value)"><i class="material-icons left">cake</i>Try Filter</button>
+	<button class="waves-effect waves-light btn" (click)="regExFunctionFilter( InputBarcode.value, InputString.value, InputMatchCriteria.value, InputReturnCriteria.value, SpecificLength.value, StartIndex.value, SelectIndex.value)"><i class="material-icons left">cake</i>Try Filter</button>
 </div>
 
 <div class="row">

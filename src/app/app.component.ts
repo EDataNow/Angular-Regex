@@ -13,158 +13,198 @@ return_dropdown: number;
 specificLength:number = 0;
 startIndex:number = 0;
 
+// declaration values for the dropdown menus in template
+matchOnDropDownValue: number;
+returnOnDropDownValue: number;
+
   ngOnInit () { }
 
-      regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown, includeMatch, specificLength, startIndex) {
+
+    // sets match dropdown menu value
+    setMatchOnDropdownValue(value) {
+        this.matchOnDropDownValue = parseInt(value)
+    }
+
+    // sets the return dropdown menu value
+    setReturnDropdownValue(value) {
+        this.returnOnDropDownValue = parseInt(value)
+    }
+
+
+    // Defines Ui Logic in Template
+    matchOnUiLogic() {
+        if( this.matchOnDropDownValue === 2 ) {
+            return true
+        }
+    }
+
+    // Defines Ui Logic in Template
+    returnUiLogic() {
+        if( this.returnOnDropDownValue === 2 || this.returnOnDropDownValue === 3 ) {
+            return true
+        }
+    }
+
+      regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown,  specificLength, startIndex, select_index) {
         const output = document.getElementById("output")
 
         //Case 1 & 2
-        if (this.caseOneAndTwo(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength, input_string)) {
-            output.innerText = this.matchGivenIndexAndInputAndSpecificLengthIncludingorExcludingMatch(barcode, input_string, startIndex, specificLength, includeMatch);
+        if (this.caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index)) {
+            output.innerText = this.matchStartIndexAndInputAndSelectIndex(barcode, input_string, startIndex, specificLength, select_index);
         }
 
         //Case 3 & 4
-        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength, input_string)) {
-            output.innerText = this.matchGivenIndexAndSpecificLengthIncludeorExcludingMatch(barcode, startIndex, specificLength, includeMatch);
+        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
+            output.innerText = this.matchStartIndexAndInput(barcode, startIndex, input_string, specificLength);
         }
 
-        //Case 5 & 6
-        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, startIndex, input_string)) {
-            output.innerText = this.matchGivenIndexAndInputIncludingorExcludingMatchReturnProceedingString(barcode, startIndex, input_string, includeMatch);
+        // //Case 5 & 6
+        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
+            output.innerText = this.matchStartIndexAndInputAndIncludeMatch(barcode, startIndex, input_string, specificLength);
         }
 
-
-        //Case 7 & 8
-        if (this.caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, specificLength)) {
-            output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchIncludingOrExcludingMatchOfSpecificLength(barcode, input_string, specificLength, includeMatch);
+        // //Case 7 & 8
+        if (this.caseSevenAndEight(match_on_dropdown, return_dropdown,  select_index, input_string)) {
+            output.innerText = this.matchOnAnyPositionAndInput(barcode, select_index, input_string, specificLength);
         }
 
-        //Case 9 & 10
-        if (this.caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch)) {
-           output.innerText = this.matchOnAnyPositionReturnStringProceedingMatchIncludingOrExcludingMatch(barcode, input_string, includeMatch);
+        // //Case 9 & 10
+        if (this.caseNineAndTen(match_on_dropdown, return_dropdown, input_string)) {
+            output.innerText = this.matchOnAnyPositionAndInputProceedingFromMatch(barcode, input_string, specificLength);
         }
 
-        //Case 11
-        if (this.caseEleven(match_on_dropdown, return_dropdown)) {
-          output.innerText = this.matchOnAnyPosition(barcode, input_string);
+        // //Case 11 & 12
+        if (this.caseEleveAndTwelve(match_on_dropdown, return_dropdown, input_string)) {
+            output.innerText = this.matchOnAnyPositionIncludeMatchProceed(barcode, input_string, specificLength);
         }
       }
 
 // Combined Methods
 
     // Case #1 & Case #2 combined methods
-    //Match on given index and input and given length, include or excluding the match.
+    //Match on start index, given input string, and select index
 
-    matchGivenIndexAndInputAndSpecificLengthIncludingorExcludingMatch(barcode, input_string, start, length, include_match){
-        let boolean_include_match = JSON.parse(include_match);
-        let input = boolean_include_match ? '^.{' + `${start - 1}` + '}(' + `${input_string}` + '.{' + `${length}` + '})' : '^.{' + `${start - 1}` + '}' + `${input_string}` + '(.{' + `${length}` + '})';
-        let index = 1;
-        console.log("include_match case #1 & #2", typeof(boolean_include_match));
+    matchStartIndexAndInputAndSelectIndex(barcode, input_string, start_index, length, select_index){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
+        let check = length > 0
+        let input = check ? '^.{'+ `${start_index - 1}`+ '}' + `${sanitizedInput}`+'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.{' +`${length}` +'})' : '^.{'+ `${start_index - 1}` + '}' + `${sanitizedInput}` +'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.+)';
+        let index =  1
         return this.regEx(input, barcode, index);
     }
 
-    // Case # 3 and case # 4 combined method
-    // Match on given index and given length, include or excluding the match.
+    // // Case # 3 and case # 4 combined method
+    // // Match on given index and input, including or excluding match, return proceeding string
 
-    matchGivenIndexAndSpecificLengthIncludeorExcludingMatch(barcode, start, length, include_match){
-        let boolean_include_match = JSON.parse(include_match);
-        let numberic_length = parseInt(length);
-
-        let input = boolean_include_match ? '^.{' + `${start - 1}` +'}' + '(.{' + `${numberic_length + 1}` +'}).*' : '^.{' + `${start}` +'}' + '(.{' + `${numberic_length}` +'}).*';
+    matchStartIndexAndInput(barcode, start_index, input_string, length){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
+        let check = length > 0;
+        let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
+        console.log(input)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
 
     // Case # 5 and case # 6 combined method
-    // Match on given index and input, including or excluding match, return proceeding string
+    // Match on given index and given length, include or excluding the match.
 
-    matchGivenIndexAndInputIncludingorExcludingMatchReturnProceedingString(barcode, start, input_string, include_match){
-        let boolean_include_match = JSON.parse(include_match);
-
-        let input = boolean_include_match ? '^.{' + `${start - 1}` + '}(' + `${input_string}` + '.+)' : '^.{' + `${start - 1}` + '}' + `${input_string}` + '(.+)';
+     matchStartIndexAndInputAndIncludeMatch(barcode, start_index, input_string, length){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
+        let check = length > 0;
+        let input = check ? '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.+)'
         let index = 1;
         return this.regEx(input, barcode, index);
     }
 
-    // Case # 7 and case # 8 combined method
-    // Match on any position, case sensitive. returns the string proceeding from match
-    // including or excluding the match and specific length after the match
+    // // Case # 7 and case # 8 combined method
+    // Match any position return on given index after the match, returning a specific length.
 
-    matchOnAnyPositionReturnStringProceedingMatchIncludingOrExcludingMatchOfSpecificLength(barcode, input_string, length, include_match){
-        let boolean_include_match = JSON.parse(include_match);
+    matchOnAnyPositionAndInput(barcode, select_index, input_string, length){
+        let check = length > 0;
 
-        let input = boolean_include_match ? '(' + `${input_string}` + '.' + '{' + `${length}` +'})' : `${input_string}`+ '(.' + '{' + `${length}` +'})';
-        let index = boolean_include_match ? 0 : 1;
+        let input = check ? `(${input_string}.{${select_index - 1}})(.{${length}})` : `(${input_string}.{${select_index - 1}})(.+)`
+        let index = 2
+
+        return this.regEx(input, barcode, index);
+    }
+
+
+   // Case # 9 and case # 10 combined method
+   // Match any position, returning everything after the match or a return given length after the match.
+
+    matchOnAnyPositionAndInputProceedingFromMatch(barcode, input_string, length){
+        let check = length > 0;
+
+        let input = check ? `${input_string}(.{${length}})` : `${input_string}(.+)`
+        let index = 1
 
         return this.regEx(input, barcode, index);
     }
 
 
-    // Case # 9 and case # 10 combined method
-    // Match on any postion, case sensitive. returns the string proceeding from
-    // match including or excluding the match
+   // Case #11 and case #12 combined method
+   // Match any position, return the whole string including the match or return a specific length string including the match
 
-    matchOnAnyPositionReturnStringProceedingMatchIncludingOrExcludingMatch(barcode, input_string, include_match){
-        let boolean_include_match = JSON.parse(include_match);
-        let input = `${input_string}` + '(.*)'
-        let index = boolean_include_match ? 0 : 1;
+    matchOnAnyPositionIncludeMatchProceed(barcode, input_string, length){
+        let check = length > 0;
+
+        let input = check ? `(${input_string}.{${length - (input_string.length)}})` : `(${input_string}.+)`
+        let index = 1
 
         return this.regEx(input, barcode, index);
-    }
-
-    // #11
-    // Match string on any position, non-case sensitive. Returns the whole string
-
-    matchOnAnyPosition(barcode, input_string){
-    let input = '(^.*' + `${input_string}` + '.*$)';
-    let index = 0;
-    return this.regEx(input, barcode, index);
     }
 
     private regEx(input, barcode, index){
         let regEx = new RegExp(input, 'i');
+        console.log(regEx)
         let match = regEx.exec(barcode);
+        console.log(match)
+
 
         if (match) {
         return match[index]
         } else {
-        return null
+        return "No Match"
         }
     }
 
-    private caseOneAndTwo(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "1" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0  && specificLength > 0 && input_string !== '') {
+    private sanitizeForRegEx(input){
+        return input.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    }
+
+
+    private caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
+        if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && input_string !== '' && select_index > 0) {
             return true
         }
     }
 
-    private caseThreeAndFour(match_on_dropdown, return_dropdown, includeMatch, startIndex, specificLength, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "1" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0 && specificLength > 0 && input_string === '') {
+    private caseThreeAndFour(match_on_dropdown, return_dropdown, startIndex, input_string) {
+        if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0  && input_string !== '') {
             return true
         }
     }
 
 
-    private caseFiveAndSix(match_on_dropdown, return_dropdown, includeMatch, startIndex, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false") && startIndex > 0 && input_string !== '') {
+    private caseFiveAndSix(match_on_dropdown, return_dropdown, startIndex, input_string) {
+        if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0 && input_string !== '') {
             return true
         }
     }
 
-    private caseSevenAndEight(match_on_dropdown, return_dropdown, includeMatch, specificLength ) {
-        if (match_on_dropdown === "2" && return_dropdown === "1" && (includeMatch === "true" || includeMatch === "false") && specificLength > 0 ) {
+    private caseSevenAndEight(match_on_dropdown, return_dropdown, selectIndex, input_string) {
+        if (match_on_dropdown === "2" && return_dropdown === "1" && selectIndex > 0 && input_string !== '') {
             return true
         }
     }
 
-    private caseNineAndTen(match_on_dropdown, return_dropdown, includeMatch) {
-        if (match_on_dropdown === "2" && return_dropdown === "2" && (includeMatch === "true" || includeMatch === "false")) {
+    private caseNineAndTen(match_on_dropdown, return_dropdown, input_string) {
+        if (match_on_dropdown === "2" && return_dropdown === "2" && input_string !== '') {
             return true
         }
     }
 
-     private caseEleven(match_on_dropdown, return_dropdown) {
-        if (match_on_dropdown === "2" && return_dropdown === "3") {
+    private caseEleveAndTwelve(match_on_dropdown, return_dropdown, input_string) {
+        if (match_on_dropdown === "2" && return_dropdown === "3" && input_string !== '') {
             return true
         }
     }
