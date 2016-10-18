@@ -4,7 +4,7 @@
 	<div id="dropdowns" class="col s6">
 		<div class="match_on_label_dd">
 		  <label for="match_on_dropdown">Match On: </label>
-			<select #InputMatchCriteria id="match_on_dropdown" class="browser-default">
+			<select #InputMatchCriteria id="match_on_dropdown" class="browser-default" (change)="setMatchOnDropdownValue($event.target.value)">
 			    <option value="1">Position</option>
 			    <option value="2">First Match of</option>
 			</select>
@@ -13,7 +13,7 @@
 	<!-- style='display: none;' -->
 	  <div  class="return_label_dd" id="return_label_dd">
 			<label class="return_label" id="return_label" for="return dropdown">Return:</label>
-			<select #InputReturnCriteria id="return_dropdown" class="browser-default">
+			<select #InputReturnCriteria id="return_dropdown" class="browser-default" (change)="setReturnDropdownValue($event.target.value)">
 			    <option value="1">From Position</option>
 			    <option value="2">From Match</option>
 			    <option value="3">From Match(Include Match)</option>
@@ -23,7 +23,7 @@
 
   <div id="options" class="col s6">
 		<div id="options_for_match_dd">
-			<div id="start_index" class="start_index">
+			<div id="start_index" class="start_index" [hidden]="matchOnUiLogic()">
 			  <div class="input-field col s4">
 			    <label class="active" for="start_index">Starting Index:</label>
 			    <input #StartIndex id="start_index" type="number" min="1">
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 
-				<div id="select_index" class="select_index">
+			<div id="select_index" class="select_index" [hidden]=" returnUiLogic()">
 				<div class="input-field col s4">
 				  <label class="active" for="select_index">Select Index:</label>
 				  <input #SelectIndex id="select_index" type="number" min="1">

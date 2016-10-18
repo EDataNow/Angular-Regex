@@ -83,3 +83,10 @@ input, p {
     padding-left: 100px;
 }
 
+.select_index {
+    padding-top: 5px;
+    padding-left: 30px;
+    width: 200px;
+}
+
+
