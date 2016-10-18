@@ -11,7 +11,7 @@
 		</div>
 
 	<!-- style='display: none;' -->
-	  <div  class="return_label_dd" id="return_label_dd">
+	  <div class="return_label_dd" id="return_label_dd">
 			<label class="return_label" id="return_label" for="return dropdown">Return:</label>
 			<select #InputReturnCriteria id="return_dropdown" class="browser-default" (change)="setReturnDropdownValue($event.target.value)">
 			    <option value="1">From Position</option>
@@ -44,13 +44,13 @@
 				</div>
 			</div>
 
-			<div id="select_index" class="select_index" [hidden]=" returnUiLogic()">
+			<div id="select_index" class="select_index" [hidden]="returnUiLogic()">
 				<div class="input-field col s4">
-				  <label class="active" for="select_index">Select Index:</label>
+				  <label class="active" for="select_index" [hidden]="matchOnUiLogic()">Select Index:</label>
+					<label class="active" for="select_index" [hidden]="!matchOnUiLogic()">Return Position after match:</label>	
 				  <input #SelectIndex id="select_index" type="number" min="1">
 				</div>
 			</div>
-
 			<div id="clear"></div>
 		</div>
 	</div>
