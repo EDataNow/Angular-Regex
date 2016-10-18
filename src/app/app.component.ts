@@ -119,9 +119,9 @@ returnOnDropDownValue: number;
     // Match any position return on given index after the match, returning a specific length.
 
     matchOnAnyPositionAndInput(barcode, select_index, input_string, length){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
-
-        let input = check ? `(${input_string}.{${select_index - 1}})(.{${length}})` : `(${input_string}.{${select_index - 1}})(.+)`
+        let input = check ? `(${sanitizedInput}.{${select_index - 1}})(.{${length}})` : `(${sanitizedInput}.{${select_index - 1}})(.+)`
         let index = 2
 
         return this.regEx(input, barcode, index);
@@ -132,9 +132,9 @@ returnOnDropDownValue: number;
    // Match any position, returning everything after the match or a return given length after the match.
 
     matchOnAnyPositionAndInputProceedingFromMatch(barcode, input_string, length){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
-
-        let input = check ? `${input_string}(.{${length}})` : `${input_string}(.+)`
+        let input = check ? `${sanitizedInput}(.{${length}})` : `${sanitizedInput}(.+)`
         let index = 1
 
         return this.regEx(input, barcode, index);
@@ -145,9 +145,9 @@ returnOnDropDownValue: number;
    // Match any position, return the whole string including the match or return a specific length string including the match
 
     matchOnAnyPositionIncludeMatchProceed(barcode, input_string, length){
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
-
-        let input = check ? `(${input_string}.{${length - (input_string.length)}})` : `(${input_string}.+)`
+        let input = check ? `(${sanitizedInput}.{${length - (input_string.length)}})` : `(${sanitizedInput}.+)`
         let index = 1
 
         return this.regEx(input, barcode, index);
