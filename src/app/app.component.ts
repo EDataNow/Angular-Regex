@@ -99,7 +99,6 @@ returnOnDropDownValue: number;
         let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
         let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
-        console.log(input)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
@@ -155,10 +154,7 @@ returnOnDropDownValue: number;
 
     private regEx(input, barcode, index){
         let regEx = new RegExp(input, 'i');
-        console.log(regEx)
         let match = regEx.exec(barcode);
-        console.log(match)
-
 
         if (match) {
         return match[index]
