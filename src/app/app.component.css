@@ -43,6 +43,12 @@ input, p {
     width: 200px;
 }
 
+.select_index {
+    padding-top: 5px;
+    padding-left: 30px;
+    width: 200px;
+}
+
 .input_string {
     padding-top: 5px;
     padding-left: 30px;
