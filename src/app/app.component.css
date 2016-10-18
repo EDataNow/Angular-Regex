@@ -1,75 +1,58 @@
-select, option {
-	width: 500px;
-}
-
-input, p {
+input {
     text-align: center;
 }
 
-/*.start_index, .input_string {
-    display:inline-block;
-    margin:10px 0;
-    border-radius:25px;
-}
 
-.match_on_label_dd {
-    display:inline-block;
-    margin:10px 0;
-    border-radius:25px;
-}
 
-#container {
-    text-align:center;
-    background-color: #99CC99;
+#match_container{
+    height:200px;
+    background-color: #8CC68C;
     margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}*/
-
-.return_label_dd, .match_on_label_dd {
-    padding-left: 30px;
+    border:2px solid black;
 }
 
-.select_index, .start_index {
-    padding-top: 5px;
-    padding-left: 30px;
-    width: 200px;
+#match_on_label_dd{
+    padding-top: 50px;
+    padding-left: 25px;
 }
 
-.input_string {
-    padding-top: 5px;
-    padding-left: 30px;
-    width: 300px;
+#start_index {
+    padding-top: 50px;
+}
+
+#input_string{
+    padding-top: 50px;
+    padding-right: 25px;
 }
 
 
-.specific_length{
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 200px;
+#return_container {
+    height:200px;
+    background-color: #87CEFA;
+    margin-top: 10px;
+    border:2px solid black;
 }
 
-.include_match{
-    padding-top: 20px;
-    padding-left: 200px;
+#specific_length{
+    padding-top: 50px;
+    padding-left: 25px;
 }
 
-.input_barcode {
-    padding-left: 30px;
-    width: 500px;
+#return_label_dd{
+    padding-top: 50px;
 }
 
-.try_button {
-    padding-top: 20px;
-    padding-left: 180px;
+#select_index{
+    padding-top: 50px;
+    padding-right: 25px;
+}
+#output_label{
+    padding-left: 30px
 }
 
-.output_label{
-    padding-left: 181px;
+#output{
+    padding-left: 55px
 }
 
-.output{
-    padding-left: 100px;
-}
+
 
