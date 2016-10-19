@@ -17,8 +17,14 @@ describe('AppComponent: AngularRegex', () => {
       it('should return all characters proceeding from given postion if match is found and length is not specified', ()=> {
         expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '1', 2, '', 5)).toEqual('45-A500-H1');
       });
+      it('should return all characters proceeding from given postion if match is found and length/input_string is not specified', ()=> {
+        expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '', 2, '', 5)).toEqual('45-A500-H1');
+      });
       it('should return the amount of characters specified by length param proceeding from given postion if match is found', ()=> {
         expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '1', 2, 3, 5)).toEqual('45-');
+      });
+        it('should return the amount of characters specified by length param proceeding from given postion if match is found and input_string is not specified', ()=> {
+        expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '', 2, 3, 5)).toEqual('45-');
       });
       it('should return all characters proceeding from given postion, even with special charcters in barcode', ()=> {
         expect(app.matchStartIndexAndInputAndSelectIndex(specialBarcode, '*I', 1, '', 3)).toEqual('VIN1.2.3.4.5.6?');
@@ -30,8 +36,14 @@ describe('AppComponent: AngularRegex', () => {
         expect(app.matchStartIndexAndInput(barcode, 7, '-', '')).toEqual('A500-H1');
         expect(app.matchStartIndexAndInput(barcode, 7, '', '')).toEqual('A500-H1');
       });
+      it('FAIL should return all characters proceeding from match if match is found and length is not specified and input_string is not specified', ()=> {
+        expect(app.matchStartIndexAndInput(barcode, 7, '', '')).toEqual('A500-H1');
+      });
       it('should return the amount of characters specified by length param proceeding from match if match is found', ()=> {
         expect(app.matchStartIndexAndInput(barcode, 7, '-', 4)).toEqual('A500');
+      });
+      it('FAIL should return the amount of characters specified by length param proceeding from match if match is found, and input_string is not specified', ()=> {
+        expect(app.matchStartIndexAndInput(barcode, 7, '', 4)).toEqual('A500');
       });
     });
 
@@ -39,8 +51,14 @@ describe('AppComponent: AngularRegex', () => {
       it('should return all characters proceeding from match, including match, if match is found and length is not specified', ()=> {
         expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 6, '5', '')).toEqual('5-A500-H1');
       });
+      it('should return all characters proceeding from match, including match, if match is found and length/input_string is not specified', ()=> {
+        expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 6, '', '')).toEqual('5-A500-H1');
+      });
       it('should return the amount of characters specified by length param proceeding from match, including match, if match is found', ()=> {
         expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 2, '1', 5)).toEqual('12345');
+      });
+      it('should return the amount of characters specified by length param proceeding from match, including match, if match is found', ()=> {
+        expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 2, '', 5)).toEqual('12345');
       });
     });
 

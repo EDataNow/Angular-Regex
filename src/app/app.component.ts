@@ -45,21 +45,21 @@ returnOnDropDownValue: number;
         }
     }
 
-      regExFunctionFilter(barcode, input_string = ".", match_on_dropdown, return_dropdown,  specificLength, startIndex, select_index) {
+      regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown,  specificLength, startIndex, select_index) {
         const output = document.getElementById("output")
 
         //Case 1 & 2
-        if (this.caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, select_index)) {
+        if (this.caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index)) {
             output.innerText = this.matchStartIndexAndInputAndSelectIndex(barcode, input_string, startIndex, specificLength, select_index);
         }
 
         //Case 3 & 4
-        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown,  startIndex)) {
+        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
             output.innerText = this.matchStartIndexAndInput(barcode, startIndex, input_string, specificLength);
         }
 
         // //Case 5 & 6
-        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown,  startIndex)) {
+        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
             output.innerText = this.matchStartIndexAndInputAndIncludeMatch(barcode, startIndex, input_string, specificLength);
         }
 
@@ -87,7 +87,6 @@ returnOnDropDownValue: number;
     matchStartIndexAndInputAndSelectIndex(barcode, input_string, start_index, length, select_index){
         let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0
-        sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
         let input = check ? '^.{'+ `${start_index - 1}`+ '}' + `${sanitizedInput}`+'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.{' +`${length}` +'})' : '^.{'+ `${start_index - 1}` + '}' + `${sanitizedInput}` +'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.+)';
         let index =  1
         return this.regEx(input, barcode, index);
@@ -97,13 +96,11 @@ returnOnDropDownValue: number;
     // // Match on given index and input, including or excluding match, return proceeding string
 
     matchStartIndexAndInput(barcode, start_index, input_string, length){
-        let sanitizedInput: String;
-        console.log("input_string" ,input_string)
-        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
+        let sanitizedInput: string;
         let check = length > 0;
-        //sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
+        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
-        console.log(input, "input", sanitizedInput)
+        console.log(input)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
@@ -112,13 +109,9 @@ returnOnDropDownValue: number;
     // Match on given index and given length, include or excluding the match.
 
      matchStartIndexAndInputAndIncludeMatch(barcode, start_index, input_string, length){
-        let sanitizedInput: String;
-         console.log("input_string 2" ,input_string)
-        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
+        let sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
-        //sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
         let input = check ? '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.+)'
-        console.log(input, "input", sanitizedInput)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
@@ -161,12 +154,6 @@ returnOnDropDownValue: number;
         return this.regEx(input, barcode, index);
     }
 
-    matchOnAnyPostion(barcode, start_index, length){
-
-
-
-    }
-
     private regEx(input, barcode, index){
         let regEx = new RegExp(input, 'i');
         let match = regEx.exec(barcode);
@@ -183,20 +170,20 @@ returnOnDropDownValue: number;
     }
 
 
-    private caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, select_index) {
+    private caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
         if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && select_index > 0) {
             return true
         }
     }
 
-    private caseThreeAndFour(match_on_dropdown, return_dropdown, startIndex) {
+    private caseThreeAndFour(match_on_dropdown, return_dropdown, startIndex, input_string) {
         if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0) {
             return true
         }
     }
 
 
-    private caseFiveAndSix(match_on_dropdown, return_dropdown, startIndex) {
+    private caseFiveAndSix(match_on_dropdown, return_dropdown, startIndex, input_string) {
         if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0) {
             return true
         }
