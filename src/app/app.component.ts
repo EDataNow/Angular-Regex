@@ -96,9 +96,11 @@ returnOnDropDownValue: number;
     // // Match on given index and input, including or excluding match, return proceeding string
 
     matchStartIndexAndInput(barcode, start_index, input_string, length){
-        let sanitizedInput = this.sanitizeForRegEx(input_string);
+        let sanitizedInput: string;
         let check = length > 0;
+        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
+        console.log(input)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
