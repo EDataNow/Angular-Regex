@@ -169,20 +169,20 @@ returnOnDropDownValue: number;
 
 
     private caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
-        if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && input_string !== '' && select_index > 0) {
+        if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && select_index > 0) {
             return true
         }
     }
 
     private caseThreeAndFour(match_on_dropdown, return_dropdown, startIndex, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0  && input_string !== '') {
+        if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0) {
             return true
         }
     }
 
 
     private caseFiveAndSix(match_on_dropdown, return_dropdown, startIndex, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0 && input_string !== '') {
+        if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0) {
             return true
         }
     }
