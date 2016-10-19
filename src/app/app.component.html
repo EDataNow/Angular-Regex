@@ -10,7 +10,7 @@
 		</div>
 		<div id="start_index" class="start_index" class="col s4" [hidden]="matchOnUiLogic()">
 			<div class="input-field">
-				<label style="color: black" class="active" for="start_index">Starting Index:</label>
+				<label style="color: black" class="active" for="start_index">Start Position:</label>
 				<input #StartIndex type="number" min="1">
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 		</div>
 		<div id="select_index" class="select_index" class="col s4" [hidden]=" returnUiLogic()">
 			<div class="input-field">
-			  <label style="color: black" class="active" for="select_index" [hidden]="matchOnUiLogic()">Select Index:</label>
+			  <label style="color: black" class="active" for="select_index" [hidden]="matchOnUiLogic()">Select Position:</label>
 			  <label style="color: black" class="active" for="select_index" [hidden]="!matchOnUiLogic()">Return Position after match:</label>
 			  <input #SelectIndex  type="number" min="1">
 			</div>
