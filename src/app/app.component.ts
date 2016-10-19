@@ -102,7 +102,7 @@ returnOnDropDownValue: number;
         input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
         //sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
-        let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
+        let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
         console.log(input, "input", sanitizedInput)
         let index = 1;
         return this.regEx(input, barcode, index);
