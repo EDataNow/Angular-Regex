@@ -45,7 +45,7 @@ returnOnDropDownValue: number;
         }
     }
 
-      regExFunctionFilter(barcode, input_string, match_on_dropdown, return_dropdown,  specificLength, startIndex, select_index) {
+      regExFunctionFilter(barcode, input_string = ".", match_on_dropdown, return_dropdown,  specificLength, startIndex, select_index) {
         const output = document.getElementById("output")
 
         //Case 1 & 2
@@ -96,12 +96,14 @@ returnOnDropDownValue: number;
     // // Case # 3 and case # 4 combined method
     // // Match on given index and input, including or excluding match, return proceeding string
 
-    matchStartIndexAndInput(barcode, start_index, input_string = '.', length){
+    matchStartIndexAndInput(barcode, start_index, input_string, length){
         let sanitizedInput: String;
-        input_string === '.' ? sanitizedInput = input_string : sanitizedInput = this.sanitizeForRegEx(input_string);
+        console.log("input_string" ,input_string)
+        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
         //sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
-        let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
+        let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
+        console.log(input, "input", sanitizedInput)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
@@ -109,12 +111,14 @@ returnOnDropDownValue: number;
     // Case # 5 and case # 6 combined method
     // Match on given index and given length, include or excluding the match.
 
-     matchStartIndexAndInputAndIncludeMatch(barcode, start_index, input_string = '.', length){
+     matchStartIndexAndInputAndIncludeMatch(barcode, start_index, input_string, length){
         let sanitizedInput: String;
-        input_string === '.' ? sanitizedInput = input_string : sanitizedInput = this.sanitizeForRegEx(input_string);
+         console.log("input_string 2" ,input_string)
+        input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let check = length > 0;
         //sanitizedInput === '' ? sanitizedInput = '.' : sanitizedInput
         let input = check ? '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.+)'
+        console.log(input, "input", sanitizedInput)
         let index = 1;
         return this.regEx(input, barcode, index);
     }
