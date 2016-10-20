@@ -17,7 +17,7 @@ class RegExProcessorSpec: QuickSpec {
         
         describe("Quick + Nimble are properly initialized"){
             
-            describe("A Simple Truth Test"){
+            describe("Case 1"){
                 
                 it("Should expect true to be true"){
                     expect(true).to(beTrue())
@@ -28,7 +28,7 @@ class RegExProcessorSpec: QuickSpec {
             describe("A Simple Fallacy Test"){
                 
                 it("Should expect false to be false"){
-                     expect(false).to(beFalse())
+                     expect(matchStartIndexAndInputAndSelectIndex(input_string:"*", start_index: 1, specific_length: 5, select_index: 1)).to(["123?4"])
                 }
                 
             }
