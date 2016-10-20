@@ -21,20 +21,28 @@ class RegExProcessor: NSObject {
     }
     
     func matchStartIndexAndInputAndSelectIndex(input_string:String, start_index:Int, specific_length:Int, select_index:Int) -> [String]  {
-        let check_specific_length = specific_length > 0
-        let sanitizedInput = input_string == " " ? "." : NSRegularExpression.escapedPattern(for: input_string)
-        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput).{\(select_index - (input_string.characters.count))}(.{\(specific_length)})" : "^.{\(start_index - 1)}\(input_string).{\(select_index - (input_string.characters.count) - start_index)}(.+)"
+        let check_specific_length = specific_length != 0
+        let sanitizedInput = NSRegularExpression.escapedPattern(for: input_string)
+        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput).{\(select_index - (input_string.characters.count) - start_index)}(.{\(specific_length)})" : "^.{\(start_index - 1)}\(sanitizedInput).{\(select_index - (input_string.characters.count) - start_index)}(.+)"
         let index = 1
         return regexMatches(pattern: regex_input, in: plainBarcode , index: index)
     }
     
     
     func matchStartIndexAndInput(input_string:String, start_index:Int, specific_length:Int) -> [String]  {
-        let check_specific_length = specific_length > 0
-        let sanitizedInput = input_string == " " ? "." : NSRegularExpression.escapedPattern(for: input_string)
-        input_string === "" ? sanitizedInput = "." : sanitizedInput = this.sanitizeForRegEx(input_string);
-        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput).{\(select_index - (input_string.characters.count))}(.{\(specific_length)})" : "^.{\(start_index - 1)}\(input_string).{\(select_index - (input_string.characters.count) - start_index)}(.+)"
-        return regexMatches(pattern: regex_input, in: plainBarcode , index: 1)
+        let check_specific_length = specific_length != 0
+        let sanitizedInput = input_string == "" ? "." : NSRegularExpression.escapedPattern(for: input_string)
+        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput)(.{\(specific_length)})" : "^.{\(start_index - 1)}\(sanitizedInput).(.+)"
+        let index = 1
+        return regexMatches(pattern: regex_input, in: plainBarcode , index: index)
+    }
+    
+    func matchStartIndexAndInputAndIncludeMatch(input_string:String, start_index:Int, specific_length:Int) -> [String]  {
+        let check_specific_length = specific_length != 0
+        let sanitizedInput = NSRegularExpression.escapedPattern(for: input_string)
+        let regex_input = check_specific_length ? "^.{\(start_index - 1)}(\(sanitizedInput).{\(specific_length - input_string.characters.count)})" : "^.{\(start_index - 1)}(\(sanitizedInput).+)"
+        let index = 1
+        return regexMatches(pattern: regex_input, in: plainBarcode , index: index)
     }
     
     
