@@ -12,6 +12,12 @@ match_on_dropdown: number;
 return_dropdown: number;
 specificLength:number = 0;
 startIndex:number = 0;
+//values for both dropdowns to be used for knowing which function to call
+matchOnPosition = "1";
+matchOnFirstMatchOf = "2";
+returnFromPosition = "1";
+returnFromMatch = "2";
+returnFromMatchIncludeMatch = "3";
 
 // declaration values for the dropdown menus in template
 matchOnDropDownValue: number;
@@ -171,38 +177,38 @@ returnOnDropDownValue: number;
 
 
     private matchOnPositionReturnFromPosition(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
-        if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && select_index > 0) {
+        if (match_on_dropdown === this.matchOnPosition && return_dropdown === this.returnFromPosition  && startIndex > 0  && select_index > 0) {
             return true
         }
     }
 
     private matchOnPositionReturnFromMatch(match_on_dropdown, return_dropdown, startIndex, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0) {
+        if (match_on_dropdown === this.matchOnPosition  && return_dropdown === this.returnFromMatch  && startIndex > 0) {
             return true
         }
     }
 
 
     private matchOnPositionReturnFromMatchIncludingMatch(match_on_dropdown, return_dropdown, startIndex, input_string) {
-        if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0) {
+        if (match_on_dropdown === this.matchOnPosition  && return_dropdown === this.returnFromMatchIncludeMatch && startIndex > 0) {
             return true
         }
     }
 
     private matchOnFirstMatchOfReturnFromPosition(match_on_dropdown, return_dropdown, selectIndex, input_string) {
-        if (match_on_dropdown === "2" && return_dropdown === "1" && selectIndex > 0 && input_string !== '') {
+        if (match_on_dropdown === this.matchOnFirstMatchOf && return_dropdown === this.returnFromPosition  && selectIndex > 0 && input_string !== '') {
             return true
         }
     }
 
     private matchOnFirstMatchOfReturnFromMatch(match_on_dropdown, return_dropdown, input_string) {
-        if (match_on_dropdown === "2" && return_dropdown === "2" && input_string !== '') {
+        if (match_on_dropdown === this.matchOnFirstMatchOf && return_dropdown === this.returnFromMatch && input_string !== '') {
             return true
         }
     }
 
     private matchOnFirstMatchOfReturnFromMatchIncludeMatch(match_on_dropdown, return_dropdown, input_string) {
-        if (match_on_dropdown === "2" && return_dropdown === "3" && input_string !== '') {
+        if (match_on_dropdown === this.matchOnFirstMatchOf && return_dropdown === this.returnFromMatchIncludeMatch && input_string !== '') {
             return true
         }
     }

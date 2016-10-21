@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RegExProcessor.swift"
+            timestampString = "498769557.233357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "matchOnFirstMatchReturnFromMatchIncludeMatch(input_string:specific_length:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RegexiOSTests/RegExProcessorSpec.swift"
+            timestampString = "498769313.35048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "spec()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RegexiOSTests.RegExProcessorSpec.(spec () -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "RegexiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SaimZahid13/Desktop/work/Angular-Regex/RegexiOS/RegexiOSTests/RegExProcessorSpec.swift"
+                  timestampString = "498769583.272811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RegexiOSTests.RegExProcessorSpec.(spec () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "RegexiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/SaimZahid13/Desktop/work/Angular-Regex/RegexiOS/RegexiOSTests/RegExProcessorSpec.swift"
+                  timestampString = "498769583.277397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "739">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
