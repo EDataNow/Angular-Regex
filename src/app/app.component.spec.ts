@@ -36,13 +36,13 @@ describe('AppComponent: AngularRegex', () => {
         expect(app.matchStartIndexAndInput(barcode, 7, '-', '')).toEqual('A500-H1');
         expect(app.matchStartIndexAndInput(barcode, 7, '', '')).toEqual('A500-H1');
       });
-      it('FAIL should return all characters proceeding from match if match is found and length is not specified and input_string is not specified', ()=> {
+      it('should return all characters proceeding from match if match is found and length is not specified and input_string is not specified', ()=> {
         expect(app.matchStartIndexAndInput(barcode, 7, '', '')).toEqual('A500-H1');
       });
       it('should return the amount of characters specified by length param proceeding from match if match is found', ()=> {
         expect(app.matchStartIndexAndInput(barcode, 7, '-', 4)).toEqual('A500');
       });
-      it('FAIL should return the amount of characters specified by length param proceeding from match if match is found, and input_string is not specified', ()=> {
+      it('should return the amount of characters specified by length param proceeding from match if match is found, and input_string is not specified', ()=> {
         expect(app.matchStartIndexAndInput(barcode, 7, '', 4)).toEqual('A500');
       });
     });

@@ -32,7 +32,7 @@ class RegExProcessor: NSObject {
     func matchStartIndexAndInput(input_string:String, start_index:Int, specific_length:Int) -> [String]  {
         let check_specific_length = specific_length != 0
         let sanitizedInput = input_string == "" ? "." : NSRegularExpression.escapedPattern(for: input_string)
-        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput)(.{\(specific_length)})" : "^.{\(start_index - 1)}\(sanitizedInput).(.+)"
+        let regex_input = check_specific_length ? "^.{\(start_index - 1)}\(sanitizedInput)(.{\(specific_length)})" : "^.{\(start_index - 1)}\(sanitizedInput)(.+)"
         let index = 1
         return regexMatches(pattern: regex_input, in: plainBarcode , index: index)
     }

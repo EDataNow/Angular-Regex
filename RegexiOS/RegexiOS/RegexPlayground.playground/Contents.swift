@@ -106,8 +106,9 @@ class RegExProcessor: NSObject {
 
 let regex = RegExProcessor(barcodeString: "P12345-A500-H1")
 regex.matchStartIndexAndInputAndSelectIndex(input_string:"1", start_index: 2, specific_length: 3, select_index: 5)
-regex.matchStartIndexAndInput(input_string:"", start_index:2, specific_length:2)
+//regex.matchStartIndexAndInput(input_string:"", start_index:2, specific_length:2)
 regex.matchStartIndexAndInputAndIncludeMatch(input_string:"", start_index:8, specific_length:3)
+regex.matchStartIndexAndInput(input_string: "-", start_index:7, specific_length:0)
 
 
 
