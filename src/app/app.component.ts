@@ -49,32 +49,32 @@ returnOnDropDownValue: number;
         const output = document.getElementById("output")
 
         //Case 1 & 2
-        if (this.caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index)) {
+        if (this.matchOnPositionReturnFromPosition(match_on_dropdown, return_dropdown, startIndex, input_string, select_index)) {
             output.innerText = this.matchStartIndexAndInputAndSelectIndex(barcode, input_string, startIndex, specificLength, select_index);
         }
 
         //Case 3 & 4
-        if (this.caseThreeAndFour(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
+        if (this.matchOnPositionReturnFromMatch(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
             output.innerText = this.matchStartIndexAndInput(barcode, startIndex, input_string, specificLength);
         }
 
         // //Case 5 & 6
-        if (this.caseFiveAndSix(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
+        if (this.matchOnPositionReturnFromMatchIncludingMatch(match_on_dropdown, return_dropdown,  startIndex, input_string)) {
             output.innerText = this.matchStartIndexAndInputAndIncludeMatch(barcode, startIndex, input_string, specificLength);
         }
 
         // //Case 7 & 8
-        if (this.caseSevenAndEight(match_on_dropdown, return_dropdown,  select_index, input_string)) {
+        if (this.matchOnFirstMatchOfReturnFromPosition(match_on_dropdown, return_dropdown,  select_index, input_string)) {
             output.innerText = this.matchOnAnyPositionAndInput(barcode, select_index, input_string, specificLength);
         }
 
         // //Case 9 & 10
-        if (this.caseNineAndTen(match_on_dropdown, return_dropdown, input_string)) {
+        if (this.matchOnFirstMatchOfReturnFromMatch(match_on_dropdown, return_dropdown, input_string)) {
             output.innerText = this.matchOnAnyPositionAndInputProceedingFromMatch(barcode, input_string, specificLength);
         }
 
         // //Case 11 & 12
-        if (this.caseEleveAndTwelve(match_on_dropdown, return_dropdown, input_string)) {
+        if (this.matchOnFirstMatchOfReturnFromMatchIncludeMatch(match_on_dropdown, return_dropdown, input_string)) {
             output.innerText = this.matchOnAnyPositionIncludeMatchProceed(barcode, input_string, specificLength);
         }
       }
@@ -170,38 +170,38 @@ returnOnDropDownValue: number;
     }
 
 
-    private caseOneAndTwo(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
+    private matchOnPositionReturnFromPosition(match_on_dropdown, return_dropdown, startIndex, input_string, select_index) {
         if (match_on_dropdown === "1" && return_dropdown === "1"  && startIndex > 0  && select_index > 0) {
             return true
         }
     }
 
-    private caseThreeAndFour(match_on_dropdown, return_dropdown, startIndex, input_string) {
+    private matchOnPositionReturnFromMatch(match_on_dropdown, return_dropdown, startIndex, input_string) {
         if (match_on_dropdown === "1" && return_dropdown === "2"  && startIndex > 0) {
             return true
         }
     }
 
 
-    private caseFiveAndSix(match_on_dropdown, return_dropdown, startIndex, input_string) {
+    private matchOnPositionReturnFromMatchIncludingMatch(match_on_dropdown, return_dropdown, startIndex, input_string) {
         if (match_on_dropdown === "1" && return_dropdown === "3" && startIndex > 0) {
             return true
         }
     }
 
-    private caseSevenAndEight(match_on_dropdown, return_dropdown, selectIndex, input_string) {
+    private matchOnFirstMatchOfReturnFromPosition(match_on_dropdown, return_dropdown, selectIndex, input_string) {
         if (match_on_dropdown === "2" && return_dropdown === "1" && selectIndex > 0 && input_string !== '') {
             return true
         }
     }
 
-    private caseNineAndTen(match_on_dropdown, return_dropdown, input_string) {
+    private matchOnFirstMatchOfReturnFromMatch(match_on_dropdown, return_dropdown, input_string) {
         if (match_on_dropdown === "2" && return_dropdown === "2" && input_string !== '') {
             return true
         }
     }
 
-    private caseEleveAndTwelve(match_on_dropdown, return_dropdown, input_string) {
+    private matchOnFirstMatchOfReturnFromMatchIncludeMatch(match_on_dropdown, return_dropdown, input_string) {
         if (match_on_dropdown === "2" && return_dropdown === "3" && input_string !== '') {
             return true
         }
