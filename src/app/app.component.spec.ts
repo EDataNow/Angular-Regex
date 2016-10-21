@@ -57,7 +57,7 @@ describe('AppComponent: AngularRegex', () => {
       it('should return the amount of characters specified by length param proceeding from match, including match, if match is found', ()=> {
         expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 2, '1', 5)).toEqual('12345');
       });
-      it('should return the amount of characters specified by length param proceeding from match, including match, if match is found', ()=> {
+      it('should return the amount of characters specified by length param proceeding from match, including match, if match is found and input string is not specified', ()=> {
         expect(app.matchStartIndexAndInputAndIncludeMatch(barcode, 2, '', 5)).toEqual('12345');
       });
     });
