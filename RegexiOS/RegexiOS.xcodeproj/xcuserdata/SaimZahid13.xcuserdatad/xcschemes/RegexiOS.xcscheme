@@ -38,16 +38,6 @@
                ReferencedContainer = "container:RegexiOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09E300DE1DA818730039E270"
-               BuildableName = "RegexiOSUITests.xctest"
-               BlueprintName = "RegexiOSUITests"
-               ReferencedContainer = "container:RegexiOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
