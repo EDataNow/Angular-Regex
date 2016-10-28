@@ -23,7 +23,7 @@ describe('AppComponent: AngularRegex', () => {
       it('should return the amount of characters specified by length param proceeding from given postion if match is found', ()=> {
         expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '1', 2, 3, 5)).toEqual('45-');
       });
-        it('should return the amount of characters specified by length param proceeding from given postion if match is found and input_string is not specified', ()=> {
+       it('should return the amount of characters specified by length param proceeding from given postion if match is found and input_string is not specified', ()=> {
         expect(app.matchStartIndexAndInputAndSelectIndex(barcode, '', 2, 3, 5)).toEqual('45-');
       });
       it('should return all characters proceeding from given postion, even with special charcters in barcode', ()=> {
