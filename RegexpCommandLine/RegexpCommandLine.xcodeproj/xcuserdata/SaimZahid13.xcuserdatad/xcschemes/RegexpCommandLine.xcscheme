@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09E300BF1DA818730039E270"
-               BuildableName = "RegexiOS.app"
-               BlueprintName = "RegexiOS"
-               ReferencedContainer = "container:RegexiOS.xcodeproj">
+               BlueprintIdentifier = "30E49AC51DC3B349000F1790"
+               BuildableName = "RegexpCommandLine"
+               BlueprintName = "RegexpCommandLine"
+               ReferencedContainer = "container:RegexpCommandLine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09E300D31DA818730039E270"
-               BuildableName = "RegexiOSTests.xctest"
-               BlueprintName = "RegexiOSTests"
-               ReferencedContainer = "container:RegexiOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09E300BF1DA818730039E270"
-            BuildableName = "RegexiOS.app"
-            BlueprintName = "RegexiOS"
-            ReferencedContainer = "container:RegexiOS.xcodeproj">
+            BlueprintIdentifier = "30E49AC51DC3B349000F1790"
+            BuildableName = "RegexpCommandLine"
+            BlueprintName = "RegexpCommandLine"
+            ReferencedContainer = "container:RegexpCommandLine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -53,24 +43,34 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.Terminal"
+         FilePath = "/Applications/Utilities/Terminal.app">
+      </PathRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09E300BF1DA818730039E270"
-            BuildableName = "RegexiOS.app"
-            BlueprintName = "RegexiOS"
-            ReferencedContainer = "container:RegexiOS.xcodeproj">
+            BlueprintIdentifier = "30E49AC51DC3B349000F1790"
+            BuildableName = "RegexpCommandLine"
+            BlueprintName = "RegexpCommandLine"
+            ReferencedContainer = "container:RegexpCommandLine.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09E300BF1DA818730039E270"
-            BuildableName = "RegexiOS.app"
-            BlueprintName = "RegexiOS"
-            ReferencedContainer = "container:RegexiOS.xcodeproj">
+            BlueprintIdentifier = "30E49AC51DC3B349000F1790"
+            BuildableName = "RegexpCommandLine"
+            BlueprintName = "RegexpCommandLine"
+            ReferencedContainer = "container:RegexpCommandLine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
