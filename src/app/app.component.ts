@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+mport { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,8 @@ match_on_dropdown: number;
 return_dropdown: number;
 specificLength:number = 0;
 startIndex:number = 0;
+
+
 //values for both dropdowns to be used for knowing which function to call
 matchOnPosition = "1";
 matchOnFirstMatchOf = "2";
@@ -95,8 +97,8 @@ returnOnDropDownValue: number;
         let check = length > 0
         let input = check ? '^.{'+ `${start_index - 1}`+ '}' + `${sanitizedInput}`+'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.{' +`${length}` +'})' : '^.{'+ `${start_index - 1}` + '}' + `${sanitizedInput}` +'.{'+ `${select_index - (input_string.length) - start_index}` + '}(.+)';
         let index =  1
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
 
@@ -108,8 +110,9 @@ returnOnDropDownValue: number;
         let check = length > 0;
         input_string === '' ? sanitizedInput = '.' : sanitizedInput = this.sanitizeForRegEx(input_string);
         let input = check ? '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.{' + `${length}` + '})' : '^.{' + `${start_index - 1}` + '}' + `${sanitizedInput}` + '(.+)';
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+        let index = 1;
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
 
@@ -121,8 +124,8 @@ returnOnDropDownValue: number;
         let check = length > 0;
         let input = check ? '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.{' + `${length - (input_string.length)}` + '})' : '^.{' + `${start_index - 1}` + '}(' + `${sanitizedInput}` + '.+)'
         let index = 1;
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
 
@@ -134,8 +137,8 @@ returnOnDropDownValue: number;
         let check = length > 0;
         let input = check ? `(${sanitizedInput}.{${select_index - 1}})(.{${length}})` : `(${sanitizedInput}.{${select_index - 1}})(.+)`
         let index = 2
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
 
@@ -148,8 +151,8 @@ returnOnDropDownValue: number;
         let check = length > 0;
         let input = check ? `${sanitizedInput}(.{${length}})` : `${sanitizedInput}(.+)`
         let index = 1
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
 
@@ -162,10 +165,17 @@ returnOnDropDownValue: number;
         let check = length > 0;
         let input = check ? `(${sanitizedInput}.{${length - (input_string.length)}})` : `(${sanitizedInput}.+)`
         let index = 1
-        const regex_used = document.getElementById("regex_used")
-        regex_used.innerText = input
+
+        this.returnRegexUsed(input);
         return this.regEx(input, barcode, index);
     }
+
+    private returnRegexUsed(regex_input) {
+       const regex_used = document.getElementById("regex")
+       regex_used.innerText = regex_input
+    }
+
+
 
     private regEx(input, barcode, index){
         let regEx = new RegExp(input, 'i');
